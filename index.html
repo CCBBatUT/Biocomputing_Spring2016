@@ -1,0 +1,73 @@
+---
+layout: default
+---
+
+<section class="main-content">
+
+
+    <article class="module color-3">
+    <h1> Welcome </h1>
+    This is the official website for the Spring 2016 Peer-led Biocomputing Group at UT Austin, offered through the <a href="http://ccbb.biosci.utexas.edu/">Center for Computational Biology and Bioinformatics</a>. The goal of this class is to take away any fear of programming that you may have so that computing can become an advantage rather than a barrier to your research. 
+    <br><br>
+    The class will meet on Wednesdays from 4-5 pm in FNT 1.104. In addition, feel free to join us for Open Coding Hour at Tuesdays 5-6pm in CCBB conference room (GDC 7.514) for any extra help or feedback.       
+    <br><br>
+    See links on left side of page for contact information and helpful resources.
+    
+    <br><br>
+    
+    <h2> Installation and Setup Instructions </h2>
+    Please carefully read and follow the setup instructions provided in the link for your operating system: either <a href="https://github.com/CCBBatUT/Biocomputing_Spring2016/raw/master/installation/installing_mac.pdf">Mac</a> or <a href="https://github.com/CCBBatUT/Biocomputing_Spring2016/raw/master/installation/installing_PC.pdf">PC</a> (if you are on Linux, the Mac instructions should work for you). It is <b>critical</b> that you have your computer properly set up, with any necessary software or operating system installed, by the second week of class (1/27/16). <b> Do not save installation to the last minute - it may take several hours (esp. PC), and you may encounter difficulties!! </b> If you need help, please come to Open Coding Hour!
+    </article>
+    
+    
+    <article class="module color-3">
+    
+        <h1> Schedule and Materials </h1>
+        <table>
+            <tr>
+                <th>Date</th> 
+                <th>Topic</th>
+                <th>Instructor</th>
+            </tr>
+
+        {% for post in site.posts reversed %}
+             <tr>
+                 <td> {{ post.date | date: '%B %d, %Y' }} </t>
+                 <td> <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> </td>
+                 <td> {{ post.instructor }} </td> 
+              </tr>   
+
+        {% endfor %}
+        </table>
+    
+    
+    
+    
+    </article>
+
+
+    <!--
+   {% for post in site.posts %}
+        <article class="module color-3">
+                <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+                <span class="category">{{ post.categories | array_to_sentence_string }}</span>
+                <p>{{ post.excerpt | strip_html | truncate: 250 }}</p>
+        </article>
+    {% endfor %}
+
+   
+    <div class="module pagination color-3">
+        {% if paginator.previous_page %}
+            <a href="{{ site.url }}{{ paginator.previous_page_path }}" class="previous">Previous</a>
+        {% endif %}
+
+        <span class="page_number">&mdash; {{ paginator.page }} of {{ paginator.total_pages }} &mdash;</span>
+
+        {% if paginator.next_page %}
+            <a href="{{ site.url }}{{ paginator.next_page_path }}" class="next">Next</a>
+        {% endif %}
+    </div>-->
+
+</section>
+
+
