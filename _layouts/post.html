@@ -12,27 +12,6 @@ layout: default
     </article>
 
 
-    <div class="social module">
-        <ul>
-
-            {% capture url %}{{ site.url }}{{ page.url }}{% endcapture %}
-
-            {% if page.shortUrl != null %}
-                {% assign url = page.shortUrl %}
-            {% endif %}
-
-            {% assign tagStr = '' %}
-            {% for tag in page.tags %}
-                {% capture tagStr %}{{ tagStr }}{{ tag }},{% endcapture %}
-            {% endfor %}
-
-            <li class="fb">
-            <a target="_blank" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?t={{ page.title }}&u={{ url }}">Facebook</a></li>
-            <li class="tw"><a target="_blank" title="Share on Twitter" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ url }}&via={{ site.twitter }}&hashtags={{ tagStr }}">Twitter</a></li>
-            <li class="gp"><a target="_blank" title="Share on Google+" href="https://plus.google.com/share?url={{ url }}">Google+</a></li>
-        </ul>
-    </div>
-
 {% if site.disqus-id %}
 <div class="module color-3">
         <div id="disqus_thread"></div>
