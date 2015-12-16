@@ -1,7 +1,7 @@
 # General
 name: "Biocomputing 2016"
 description: "Peer-led Introduction to Computational Biology"
-baseurl: "http://ccbbatut.github.io"
+baseurl: "https://ccbbatut.github.io/Biocomputing_Spring2016"
 future: true
 
 
