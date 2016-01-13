@@ -16,7 +16,7 @@ layout: default
     <br><br>
     
     <h2> Installation and Setup Instructions </h2>
-    Please carefully read and follow the setup instructions provided in the link for your operating system: either <a href="https://github.com/CCBBatUT/Biocomputing_Spring2016/raw/master/installation/installing_mac.pdf">Mac</a> or <a href="https://github.com/CCBBatUT/Biocomputing_Spring2016/raw/master/installation/installing_pc.pdf">PC</a> (if you are on Linux, the Mac instructions should work for you). It is <b>critical</b> that you have your computer properly set up, with any necessary software or operating system installed, by the second week of class (1/27/16). <b> Do not save installation to the last minute - it may take several hours (esp. PC), and you may encounter difficulties!! </b> If you need help, please come to Open Coding Hour!
+    If you are using a Windows/PC machine, you will need to install some software on your computer in order to use python. Follow <a href="https://github.com/CCBBatUT/Biocomputing_Spring2016/raw/master/installation/installing_pc.pdf">these instructions</a> to setup your computer. You should setup your system no later than the second week of class (1/27/16). <b> Do not save installation to the last minute - it may take several hours, and you may encounter difficulties!! </b> If you need help, please feel free come to Open Coding Hour in GDC 7.514 on Tuesday 1/26/16.
     </article>
     
     
@@ -34,7 +34,7 @@ layout: default
         {% for post in site.posts reversed %}
              <tr>
                  <td> {{ post.date | date: '%B %d, %Y' }} </t>
-                 <td> <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> </td>
+                 <td align="left"> <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> </td>
                  <td> <a href="{{ post.materials }}">Cheatsheet and Files</a></td> 
                  <td> {{ post.instructor }} </td> 
               </tr>   
