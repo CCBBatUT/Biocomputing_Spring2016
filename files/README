@@ -1,0 +1,3 @@
+SJS.
+
+Currently, files from last year are in old_files/. This directory should end up containing zip files of materials for each week (including exercises, cheatsheets, etc). The zip files should be named according to the file name indicated in the YAML frontmatter "materials" key of the corresponding lesson plan.

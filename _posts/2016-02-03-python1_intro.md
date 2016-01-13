@@ -2,8 +2,8 @@
 layout: post
 title: "Python I: Variable types and Operators"
 instructor: Stephanie
-permalink: /python1/
-materials: files/Archive.zip
+permalink: /python1_introduction/
+materials: files/python1.zip
 ---
 
 ## Object-oriented programming
