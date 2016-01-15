@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Python V: Best Practices and Testing"
-instructor: Becca
-permalink: /python4_bestpractices/
+instructor: Stephanie
+permalink: /python5_bestpractices/
 materials: files/python5.zip
 ---
 
