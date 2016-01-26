@@ -6,10 +6,11 @@ permalink: /virtualbox_instructions/
 ## Setting up the "UT Biocomputing" virtual machine
 
 The "UT Biocomputing" virtual machine provides users with a basic Ubuntu Linux installation (including bash, Python, R, and git). Minimum requirements for the host machine are as follows:
-  * CPU: Any mostly-modern, 64-bit, x86-compatible CPU; if your computer was built/bought after 2009 or so, you should be ok.
-  * RAM: 2-GB at the _very_ least; 4-GB or more is preferable.
-  * Disk: 15-GB at the _very_ least; the VM image can grow to 40+ GB, so plan for that if you're using the VM to process data.
-  * Host OS: A 64-bit version of Windows or OS X.
+
+  + CPU: Any mostly-modern, 64-bit, x86-compatible CPU; if your computer was built/bought after 2009 or so, you should be ok.
+  + RAM: 2-GB at the *very* least; 4-GB or more is preferable.
+  + Disk: 15-GB at the *very* least; the VM image can grow to 40+ GB, so plan for that if you're using the VM to process data.
+  + Host OS: A 64-bit version of Windows or OS X.
 
 
 1. Download the VirtualBox installer for your platform:
