@@ -3,7 +3,7 @@ layout: post
 title: "Python I: Variable types and Operators"
 instructor: Stephanie
 permalink: /python1_introduction/
-materials: files/python1.zip
+materials: files/Cheatsheet_Python1.pdf
 ---
 
 ## Object-oriented programming
@@ -14,17 +14,17 @@ While these concepts might seem abstract, python syntax and behavior will make m
 
 ```python
 
->>> # Assume mybook is a book instance
+# Assume mybook is a book instance
 
->>> # Call an attribute
->>> mybook.number_of_pages
->>> mybook.height
->>> mybook.width
+# Call an attribute
+mybook.number_of_pages
+mybook.height
+mybook.width
 
->>> # Call a method
->>> mybook.read()
->>> mybook.write()
->>> mybook.throw_at_bad_people("Voldemort") # methods might take particular arguments, in this case who we're launching books at
+# Call a method
+mybook.read()
+mybook.write()
+mybook.throw_at_bad_people("Voldemort") # methods might take particular arguments, in this case who we're launching books at
 ```
 As you see, attributes and methods are called after a . at the end of the instance name. Unlike attributes, however, methods end with parentheses. Sometimes, methods can take particular **arguments** which relate to their function, for instance when we threw the book at Voldemort.
 
@@ -442,6 +442,45 @@ oh man, I got some numbers: 55 , 44.6 , and even a list: [1, 2, 3] , and even a 
 
 
 
+## Exercises 
+
+Remember that **printing** is the only way to confirm if your code is behaving as expected. Print print print!
+
+
+1. Write a script to count the number of each nucleotide (A, C, G, T) in a provided sequence. Your script should use the function `raw_input()` to prompt users for a sequence (assumed to contain only A, C, G, T!), and the method ".count()" to count each nucleotide. Your script should print out the calculated nucleotide counts, for example:
+
+    ```
+        Number of A: 10
+        Number of C: 5
+        Number of G: 9
+        Number of T: 8
+    ```    
+
+2. Modify your code from the previous exercise to compute the *percentages* (rather than counts) of each nucleotide in a user-provided sequence. As before, print out the calculated percentages.
+
+3. Define a variable called `mystring`, which contains a lengthy string of some kind (random letters, your address, song lyrics, a haiku, whatever). Perform the following tasks with this variable:
+    + Use the `len()` function to determine how many characters are in your string.
+    + Without changing your variable itself, replace the all occurrences of a letter of your choice with the number 6. Use the string method `.replace()` for this task.
+    + Redefine mystring such that only the first 3 occurrences of this letter are replaced, again using the string method `.replace()`. (*Hint*: not sure how to do this? Enter `help(replace)` in a Python interpretter session, or google how to use the `replace` method!).
+    + Try to use indexing to replace the character in the 5th position of mystring with the letter "X". Did this work? Can you figure out why or why not?
+    + Use the `.upper()` method to re-define your string variable to be entirely uppercase. Make sure your variable has been redefined by printing it out!
+    + Use the `.split()` method to split your string into a list. Do this two times, the first time using a character that *is* in your string and the second time using a character that *is not* present in your string. Think about why the resulting output looks the way it does.
+
+
+4. Create a variable called `mylist`, which is a list of numbers (integers or floats, whatever you choose!). Perform the following tasks with this variable:
+    + Use the `len()` function to determine how many entries are in your list.
+    + Use the `.append()` method to add another number to the end of your list. For example, if you started with `[1, 2, 6, 7]`, you might now have `[1, 2, 6, 7, 3.3]`.
+    + Re-assign the 2nd entry (*hint*: which index is this?) of your list to the opposite sign of that entry (i.e. 4 would now be -4, -9 would now be 9).
+    + Re-assign the 1st entry of your list to be a *new list*. For example, if you started with `[1, 2, 6, 7]`, you might now have `[ [1,2,3], 2, 6, 7]`. Use the `len()` function to determine how long the list is now. Is it what you expected? Think about why or why not.
+    + Use the `len()` function to determine the length of this first entry within your list (*hint*: lots of indexing!).
+    
+
+5. Create a variable called `mydict`, which contains this dictionary (you can copy/paste!): `{"dna": "nucleotides", "rna": "nucleotides", "protein": "amino acids"}`.  Perform the following tasks with this variable:
+    + Use dictionary indexing to print out the **value** associated with the key **"dna"**.
+    + Add this new key:value pair to the dictionary: "molecule" is the key, and "atoms" is the value. 
+    + Add this other new key:value pair to the dictionary: "dna":"ACGT". Print out the dictionary. What do you notice? What does the output tell you about dictionary keys and values?
+    + Create a new list variable which contains the *keys* in your dictionary. For this exercise, do not type out the keys - use the `.keys()` method.
+    + Determine the length of the value associated with the dictionary key "dna". Do this procedure for each key in the dictionary, and calculate the average value length. Print this value to screen.
 
 
 
