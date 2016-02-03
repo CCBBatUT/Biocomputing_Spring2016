@@ -42,7 +42,7 @@ In addition to symbols used for basic calculations, Python (like other languages
 
 Symbol   | What it does | Example
 ---------|--------------|---------
-  == | Equals       |  `5 == 5` results in True <br> `9 is 9` results in True
+  == | Equals       |  `5 == 5` results in True
   != | Not equals       |  `5 != 5` results in False
  > | Greater than       |  `5 > 6` results in False <br> `11 > 6.23` results in True
  >= | Greater than or equal to |  `5 >= 4` results in True
@@ -155,24 +155,24 @@ Python indexes **starting at 0**, meaning the first item in a given string is th
 9
 
 >>> # Numbers can also be strings, if they are in quotation marks
->>> age = "26"
->>> type(age)
+>>> number = "100"
+>>> type(number)
 <type 'str'>
 
->>> # Even though 26 is a number, we set up the variable age as a string, so no math can be performed with this variable
->>> age - 7
+>>> # Even though 100 is a number, we set up the variable number as a string, so no math can be performed with this variable
+>>> number - 7
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: unsupported operand type(s) for -: 'str' and 'int'
 
->>> # But, since the value 26 is, in fact, a number we can recast age as an integer or float and then do maths with it!
->>> int(age) - 7
-19
->>> # Again, age is still a string. We'd have to redefine the variable itself to make it an integer (or float) for good
->>> type(age)
+>>> # But, since the value 100 is, in fact, a number we can recast the variable as an integer or float and then do maths with it!
+>>> int(number) - 7
+93
+>>> # Again, number is still a string. We'd have to redefine the variable itself to make it an integer (or float) for good
+>>> type(number)
 <type 'str'>
->>> age = int(age)
->>> type(age)
+>>> number = int(number)
+>>> type(number)
 <type 'int'>
 
 >>> # We can't recast the variable name though, since letters just aren't numbers.
@@ -230,7 +230,7 @@ Here are some useful **string methods**:
 
 
 ### Lists
-Lists are defined using brackets (`[ ]`), and each list item can be any variable type. 
+Lists are defined using brackets `[ ]`, and each list item can be any variable type. 
 
 {% highlight python %}
 >>> # This list contains only integers
@@ -288,7 +288,7 @@ simple
 
 
 ### Dictionaries
-Dictionaries are defined using braces (`{}`), and they are essentially **unordered** lists of key:value pairs, and they are python's version of "associative arrays." Keys and values can be any type, although typically keys are either integers, floats, or strings. Dictionaries are incredibly useful for storing information; all keys must be unique, but values may be repeated.
+Dictionaries are defined using braces `{ }`, and they are essentially **unordered** lists of key:value pairs, and they are python's version of "associative arrays." Keys and values can be any type, although typically keys are either integers, floats, or strings. Dictionaries are incredibly useful for storing information; all keys must be unique, but values may be repeated.
 
 {% highlight python %}
 >>> taxonomy = {'gecko':'vertebrate', 'human':'vertebrate', 'squid':'mollusk', 'butterfly':'insect', 'oak tree': 'plant'}
@@ -321,7 +321,7 @@ taxonomy.values()
 
 ### Tuples
 
-Tuples are essentially immutable (i.e. unchangable) lists, created with parentheses `()`. We won't use them much yet, but they're nice to be aware of.
+Tuples are essentially immutable (i.e. unchangable) lists, created with parentheses `( )`. This variable type will become very important when we learn about functions in a few weeks.
 {% highlight python %}
 >>> my_tuple = (4, 5, 6)
 >>> # Note that python will not let you change a tuple once it has been defined:
@@ -447,21 +447,19 @@ I am writing a full sentence here as a string variable.2
 
 ## Exercises 
 
-Remember that **printing** is the only way to confirm if your code is behaving as expected. Print print print!
+Remember that **printing** is the only way to confirm if your code is behaving as expected. Print print print! We recommend that you perform these exercises in Python scripts (not in an active interpreter session). 
 
-
-1. Write a script to count the number of each nucleotide (A, C, G, T) in a nucleotide sequence. You should define a variable containing a sequence (**hint**: this variable should be a string!), and you should use the method `.count()` to count each nucleotide. Your script should print out the calculated nucleotide counts, for example:
-
++ Write a script to count the number of each nucleotide (A, C, G, T) in a nucleotide sequence. You should define a variable containing a sequence (**hint**: this variable should be a string!), and you should use the method `.count()` to count each nucleotide. Your script should print out the calculated nucleotide counts, for example:
 {% highlight python %}
-Number of A: 10
-Number of C: 5
-Number of G: 9
-Number of T: 8
+    Number of A: 10
+    Number of C: 5
+    Number of G: 9
+    Number of T: 8
 {% endhighlight %}   
 
-2. Modify your code from the previous exercise to compute the **percentages** (rather than counts) of each nucleotide in given sequence. As before, print out the calculated percentages.
++ Modify your code from the previous exercise to compute the **percentages** (rather than counts) of each nucleotide in given sequence. As before, print out the calculated percentages.
 
-3. Define a variable called `mystring`, which contains a lengthy string of some kind (random letters, your address, song lyrics, a haiku, whatever). Perform the following tasks with this variable:
++ Define a variable called `mystring`, which contains a lengthy string of some kind (random letters, your address, song lyrics, a haiku, whatever). Perform the following tasks with this variable:
     + Use the `len()` function to determine how many characters are in your string.
     + Without changing your variable itself, replace the all occurrences of a letter of your choice with the number 6. Use the string method `.replace()` for this task.
     + Redefine mystring such that only the first 3 occurrences of this letter are replaced, again using the string method `.replace()`. (**Hint**: not sure how to do this? Enter `help(replace)` in a Python interpretter session, or google how to use the `replace` method!).
@@ -470,7 +468,7 @@ Number of T: 8
     + Use the `.split()` method to split your string into a list. Do this two times, the first time using a character that **is** in your string and the second time using a character that *is not* present in your string. Think about why the resulting output looks the way it does.
 
 
-4. Create a variable called `mylist`, which is a list of numbers (integers or floats, whatever you choose!). Perform the following tasks with this variable:
++ Create a variable called `mylist`, which is a list of numbers (integers or floats, whatever you choose!). Perform the following tasks with this variable:
     + Use the `len()` function to determine how many entries are in your list.
     + Use the `.append()` method to add another number to the end of your list. For example, if you started with `[1, 2, 6, 7]`, you might now have `[1, 2, 6, 7, 3.3]`.
     + Re-assign the 2nd entry (**hint**: which index is this?) of your list to the opposite sign of that entry (i.e. 4 would now be -4, -9 would now be 9).
@@ -478,7 +476,7 @@ Number of T: 8
     + Use the `len()` function to determine the length of this first entry within your list (**hint**: lots of indexing!).
     
 
-5. Create a variable called `mydict`, which contains this dictionary (you can copy/paste!): `{"dna": "nucleotides", "rna": "nucleotides", "protein": "amino acids"}`.  Perform the following tasks with this variable:
++ Create a variable called `mydict`, which contains this dictionary (you can copy/paste!): `{"dna": "nucleotides", "rna": "nucleotides", "protein": "amino acids"}`.  Perform the following tasks with this variable:
     + Use dictionary indexing to print out the **value** associated with the key **"dna"**.
     + Add this new key:value pair to the dictionary: "molecule" is the key, and "atoms" is the value. 
     + Add this other new key:value pair to the dictionary: "dna":"ACGT". Print out the dictionary. What do you notice? What does the output tell you about dictionary keys and values?
