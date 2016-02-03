@@ -3,7 +3,7 @@ layout: post
 title: "Python I: Variable types and Operators"
 instructor: Stephanie
 permalink: /python1_introduction/
-materials: files/Cheatsheet_Python1.pdf
+materials: files/python1_cheatsheet.pdf
 ---
 
 ## Object-oriented programming
