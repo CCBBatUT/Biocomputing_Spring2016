@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Python I: Variable types and Operators"
+title: "Python I: Operators and Variable types"
 instructor: Stephanie
 permalink: /python1_introduction/
 materials: files/python1_cheatsheet.pdf
@@ -12,8 +12,7 @@ Python is an object-oriented programming (OOP) language. Simply put, this means 
 While these concepts might seem abstract, python syntax and behavior will make much more sense in light of the OOP paradigm upon which the language is based. In particular, attributes and methods are accessed in systematic ways, as follows:
 
 
-```python
-
+{% highlight python %}
 # Assume mybook is a book instance
 
 # Call an attribute
@@ -25,8 +24,9 @@ mybook.width
 mybook.read()
 mybook.write()
 mybook.throw_at_bad_people("Voldemort") # methods might take particular arguments, in this case who we're launching books at
-```
-As you see, attributes and methods are called after a . at the end of the instance name. Unlike attributes, however, methods end with parentheses. Sometimes, methods can take particular **arguments** which relate to their function, for instance when we threw the book at Voldemort.
+{% endhighlight %}
+
+As you see, attributes and methods are called after a `. at the end of the instance name. Unlike attributes, however, methods end with parentheses. Sometimes, methods can take particular **arguments** which relate to their function, for example when we threw the book at Voldemort.
 
 
 ## Operators
@@ -38,7 +38,7 @@ First, we have the standard operators for addition (`+`), subtraction (`-`), mul
 2. Exponent operator, `**`, e.g. `5**2` will result in 25.
 
 ### Logical operators
-In addition to symbols used for basic calculations, python (like other languages!) has a series of symbols used to compare statements in a True/False context. Such statements are called **logical statements**, and the symbols we used to compare them are called **logical operators**. The most commonly used logical operators include, 
+In addition to symbols used for basic calculations, Python (like other languages!) has a series of symbols used to compare statements in a True/False context. Such statements are called **logical statements**, and the symbols we used to compare them are called **logical operators**. The most commonly used logical operators include, 
 
 Symbol   | What it does | Example
 ---------|--------------|---------
@@ -54,8 +54,7 @@ And above all, it is **very** important to remember that the equals logical comp
 We can also perform multiple comparisons at once, using the keywords `and` and/or `or`. 
 For example, 
 
-``` python
-
+{% highlight python %}
 >>> # For "and," both logical statements must be true to result in True
 >>> 5 == 5 and 6 == 6
 True
@@ -69,40 +68,40 @@ True
 >>> # We can use the keyword "not" to negate a logical statement
 >>> 3 < 11 and not 4 >= 7
 True
-```
+{% endhighlight %}
 
 
 ## Variables
 We assign values to a variable using the equals sign, `=`.
 
-``` python
+{% highlight python %}
 >>> a = 5
->>> # Check that the variable was correctly assigned using the "print" statement
->>> print a
+>>> # Check that the variable was correctly assigned using the print() function
+>>> print(a)
 5
-```
+{% endhighlight %}
+
 
 All variables have a certain **type**. The variable type deterines what can be done with the variable itself. Standard python types include the following,
 
 
-Variable Type   | Description | Casting
+Variable Type   | Description | Defining | Casting
 ---------|--------------|---------
-integer | whole number  | int()       
-float   | decimal number | float()
-string  | ordered, immutable character container | str()
-list    | ordered, mutable container | list()
-dictionary | unordered, mutable container | dict()
-tuple | ordered, immutable container | tuple()
+integer | whole number  | int() | int()      
+float   | decimal number | float() | int()
+string  | ordered, immutable character container | " " or ' ' | str() 
+list    | ordered, mutable container | [ ] | list()
+dictionary | unordered, mutable container | { } | dict()
+tuple | ordered, immutable container | ( ) | tuple()
 
-Remember, every time you create a variable, you are essentially creating an **instance** of that particular variable type. As a consequence, there are certain properties (attributes and methods!) associated with each type of variable.
+Remember, every time you create a variable, you are creating an **instance** of that particular variable type. As a consequence, there are certain properties (attributes and methods!) associated with each type of variable.
 
 ### Integers and floats
 Integers and floats are python's primary types for dealing with numbers. 
 
 Integers are whole numbers only, but floats include decimal places. Whether a variable is an integer or float turns out to matter a lot - if you perform an operation with integers, the result will be an integer (even if the "real" answer is actually a float!)
 
-```python
-
+{% highlight python %}
 >>> a = 6
 >>> type(a)
 <type 'int'>
@@ -137,14 +136,16 @@ Integers are whole numbers only, but floats include decimal places. Whether a va
 >>> y = 6
 >>> x / y
 0.8333333333333334
-```
+{% endhighlight %}
 
 ### Strings
 In python, a string is an **immutable** container of **characters**. By "immutable", we mean that it can't be changed - that is, once you create a string, you can't rewrite certain parts of it. It's an all-or-nothing thing. By characters, we basically mean "not numbers" - consequently, no mathematical operations can be done on strings. 
-Strings are also **ordered** - python remembers the orders of values used in the list. This means we can **index** items in a list, again using brackets `[]`. **Importantly**, python indexes **starting at 0**, meaning the first item in a given string is the 0th entry.
 
-```python
+Strings are also **ordered**. This means we can **index** characters in a string, using brackets `[ ]`. 
 
+Python indexes **starting at 0**, meaning the first item in a given string is the 0th entry.
+
+{% highlight python %}
 >>> # Assign strings using quotation marks
 >>> name = "Stephanie"
 >>> type(name)
@@ -188,11 +189,12 @@ a
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: 'str' object does not support item assignment
-```
+{% endhighlight python %}
 
-Some useful string methods:
+<br>
+Here are some useful **string methods**:
 
-``` python
+{% highlight python %}
 >>> my_string = "This is a really nice string for showing examples."
 
 >>> # .upper() converts your string to upper-case
@@ -224,25 +226,28 @@ Some useful string methods:
 'AAAAAGUCGAGGUAGCGAAAA'
 >>> dna_string.replace("T", "U", 1)
 'AAAAAGUCGAGGTAGCGAAAA'
-```
+{% endhighlight %}
 
 
 ### Lists
-Lists are defined using brackets (`[]`), and each list item can be any variable type. 
+Lists are defined using brackets (`[ ]`), and each list item can be any variable type. 
 
-``` python
-
+{% highlight python %}
 >>> # This list contains only integers
 >>> numbers = [1,2,3,4,5]
 
 >>> # This list contains integers and floats and strings
 >>> crazy_list = [5, 77.2, -9, "word", -1.32, "more words"]
-```
+{% endhighlight %}
 
-Python lists are incredibly flexible. Like strings, they are ordered, so they support indexing. However, unlike strings, lists are **mutable**, meaning they can be changed! List items can be removed, changed, and new list items can even be added after they are defined. In other words, lists can be changed *in place without (re-)assigning anything*. 
+<br>
+Python lists are incredibly flexible. Like strings, they are ordered, so they support indexing. 
 
-``` python
+However, unlike strings, lists are **mutable**, meaning they can be changed! List items can be removed, changed, and new list items can even be added after they are defined. 
 
+In other words, lists can be changed **in place without needed to reassign the variable with an =**. 
+
+{% highlight python %}
 >>> simple = [1,4,9,2,5,11]
 >>> simple[4] # grab the 4th entry in this list
 2
@@ -263,12 +268,12 @@ simple
 [1, 2, 4, 5, 11, 888]
 >>> max(simple) # but probably only use this when the list has only numbers. (note that min() is the opposite function.)
 888
-```
+{% endhighlight %}
 
-Some useful list methods:
+<br>
+Here are some useful **list methods**:
 
-``` python
-
+{% highlight python %}
 >>> # .append(value) adds value to the end of a list, ultimately modifying the list in place
 >>> simple.append(100.33)
 simple
@@ -276,25 +281,63 @@ simple
 >>> len(simple) # The list length changed
 7
 
->>> # .remove(value) removes all entries in a list corresponding to the provided argument, value
->>> simple.remove(11)
-[1,4,888,2,5,100.33]
-
->>> # .insert(index, value) inserts the provided value into the specified index of the list
->>> simple.insert(0, 500)
-[500,1,4,888,2,5,100.33]
-
 >>> # .index(value) returns the index for a given value
 >>> simple.index(888)
 2
+{% endhighlight %}
 
 
-```
+### Dictionaries
+Dictionaries are defined using braces (`{}`), and they are essentially **unordered** lists of key:value pairs, and they are python's version of "associative arrays." Keys and values can be any type, although typically keys are either integers, floats, or strings. Dictionaries are incredibly useful for storing information; all keys must be unique, but values may be repeated.
 
-Let's delve a bit more into indexing now. In general, indexing follows the paradigm `container[x:y:z]`, where x is the starting index, y is the ending index, and z is the step. However, you do not need to provide all of these value to index. In fact, 
+{% highlight python %}
+>>> taxonomy = {'gecko':'vertebrate', 'human':'vertebrate', 'squid':'mollusk', 'butterfly':'insect', 'oak tree': 'plant'}
+{% endhighlight %}
 
-```python
+Because dictionaries are unordered, we cannot index them using the standard brackets. Instead, we index dictionaries using **keys**. The key:value pairs are fixed, but there is no specific order to the key:value pairs within the dictionary. 
 
+{% highlight python %}>>> taxonomy["gecko"]
+'vertebrate'
+>>> # Add a new key:value pair
+>>> taxonomy["e. coli"] = "bacteria"
+>>> taxonomy
+t
+
+>>> # the method .keys() pulls up all dictionary keys as a list
+taxonomy.keys()
+['butterfly', 'oak tree', 'squid', 'e. coli', 'human', 'gecko']
+
+>>> # the method .values() pulls up all dictionary values as a list
+taxonomy.values()
+['insect', 'plant', 'mollusk', 'bacteria', 'vertebrate', 'vertebrate']
+
+>>> # the methods .items() pulls up all key:value pairs as tuples
+>>> taxonomy.items()
+[('butterfly', 'insect'), ('oak tree', 'plant'), ('squid', 'mollusk'), ('e. coli', 'bacteria'), ('human', 'vertebrate'), ('gecko', 'vertebrate')]
+
+>>> # Values can be all kinds of things, even lists
+>>> meals = {"breakfast": ["coffee", "cereal", "banana"], "lunch": ["salad", "lemonade", "chicken fingers"], "dinner": ["steak", "asparagus", "beer", "more beer"], "dessert": ["ice cream", "chocolate sauce", "sprinkles"] }
+{% endhighlight %}
+
+### Tuples
+
+Tuples are essentially immutable (i.e. unchangable) lists, created with parentheses `()`. We won't use them much yet, but they're nice to be aware of.
+{% highlight python %}
+>>> my_tuple = (4, 5, 6)
+>>> # Note that python will not let you change a tuple once it has been defined:
+>>> my_tuple[1] = 88 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+{% endhighlight %}
+
+
+## Indexing
+In general, indexing follows the paradigm `container[x:y:z]`, where x is the starting index, y is the ending index, and z is the step. However, you do not need to provide all of these value to index.
+
+**Most importantly**, the starting index is *inclusive* but the ending index is *exclusive*. See below for examples.
+
+{% highlight python %}
 >>> fib_list = [0,1,1,2,3,5,8,13,21,34,55,89]
 
 >>> # Select the 3rd item
@@ -320,57 +363,25 @@ fib_list[-3]
 >>> # Change the step of indexing with the format x:y:z (before, z was defaulted to 1!)
 >>> fib_list[2:10:3]
 [1, 5, 21]
-```
+{% endhighlight %}
 
 
 
-### Dictionaries
-Dictionaries are defined using braces (`{}`), and they are essentially **unordered** lists of key:value pairs, and they are python's version of "associative arrays." Keys and values can be any type, although typically keys are either integers, floats, or strings. Dictionaries are incredibly useful for storing information; all keys must be unique, but values may be repeated.
+## Other useful functions
 
-```python
+The `len()` function returns the length of a container (list, dictionary, string, tuple)
+{% highlight python %}
+>>> a = [1, 2, 6, 8, 1]
+>>> len(a) # Returns the number of entries in 'a'
+5
+>>> b = "This is a string!"
+>>> len(b) # Returns the number of characters in 'b'
+17
+{% endhighlight %}
 
->>> taxonomy = {'gecko':'vertebrate', 'human':'vertebrate', 'squid':'mollusk', 'butterfly':'insect', 'oak tree': 'plant'}
-```
-
-Dictionaries are indexed using keys. As dictionaries are unordered, the particular order (e.g. gecko, vertebrate, squid..) is not preserved, but the key:value pairs are fixed.
-
-```python
-
->>> taxonomy["gecko"]
-'vertebrate'
->>> # Add a new key:value pair
->>> taxonomy["e. coli"] = "bacteria"
->>> taxonomy
-t
-
->>> # the method .keys() pulls up all dictionary keys as a list
-taxonomy.keys()
-['butterfly', 'oak tree', 'squid', 'e. coli', 'human', 'gecko']
-
->>> # the method .values() pulls up all dictionary values as a list
-taxonomy.values()
-['insect', 'plant', 'mollusk', 'bacteria', 'vertebrate', 'vertebrate']
-
->>> # the methods .items() pulls up all key:value pairs as tuples
->>> taxonomy.items()
-[('butterfly', 'insect'), ('oak tree', 'plant'), ('squid', 'mollusk'), ('e. coli', 'bacteria'), ('human', 'vertebrate'), ('gecko', 'vertebrate')]
-
->>> # Values can be all kinds of things, even lists
->>> meals = {"breakfast": ["coffee", "cereal", "banana"], "lunch": ["salad", "lemonade", "chicken fingers"], "dinner": ["steak", "asparagus", "beer", "more beer"], "dessert": ["ice cream", "chocolate sauce", "sprinkles"] }
-
-```
-
-### Tuples
-
-Tuples are basically immutable lists, created with parentheses `()`. We won't use them much, but they're nice to be aware of. Aaand that's all we'll say for now.
-
-### Useful functions
-
-Some fun things we can do with these variables!
-
-```python
-
->>> # the range() function creates an arithmetic list, by default starting from zero and with a step of 1
+<br>
+The `range()` function creates an arithmetic list, by default starting from zero and with a step of 1
+{% highlight python %}
 >>> simple_range = range(20)
 >>> simple_range
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
@@ -378,68 +389,60 @@ Some fun things we can do with these variables!
 [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
 >>> complexer_range = range(5, 20, 3) # start from 5 with a step of 3. look familiar??
 [5, 8, 11, 14, 17]
+{% endhighlight %}
 
->>> # "sep".join(list) will join items in list as a string together, with items separated by "sep"
->>> my_list = ["look", "this", "is", "a", "list"]
->>> " ".join(my_list)
-'look this is a list'
+<br>
+The `type()` function tells you the type (e.g. list, int) of a certain variable. This function can be very useful for error checking.
+{% highlight python %}
+>>> my_list = [4,5,6,7,8]
+>>> type(my_list)
+<type 'list'>
+>>> my_int = 99
+>>> type(my_int)
+<type 'int'>
+{% endhighlight %}
 
->>> # Merge two lists together into a single list of paired tuples with the function zip()
->>> loci = ["locus1", "locus2", "locus3", "locus4"]
->>> snps = ["A/C", "T/G", "G/C", "A/G"]
->>> zip(loci, snps)
-[('locus1', 'A/C'), ('locus2', 'T/G'), ('locus3', 'G/C'), ('locus4', 'A/G')]
->>> # Turn these zipped lists into a dictionary
->>> dict(zip(loci, snps))
-{'locus1': 'A/C', 'locus2': 'T/G', 'locus3': 'G/C', 'locus4': 'A/G'}
 
-```
+<br>
+The `dir()` function tells you what types of methods or actions you can perform on a given variable (ignore the `__action__` formatted output - this is not relevant for now!).
+{% highlight python %}
+>>> my_list = [4,5,6,7,8]
+>>> dir(my_list)
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__delslice__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getslice__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__setslice__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+>>> my_int = 4
+>>> dir(my_int)
+{% endhighlight %}
 
-### Print statements
-Printing information from a script to "stdout" is a critically important compontent of scripting and programming. Using print statements, you can determine if your code is actually doing what you think it is. Most of the time, your code will have some issues and will need to be "debugged." Printing to screen is one of the best and easiest strategies for ensuring that your code is working as intended.
 
-```python
+## The print function
+Printing information from a script to "stdout" is a critically important compontent of scripting and programming. *Only by printing* can you determine if your code is actually doing what you think it is. Most of the time, your code will have some issues and will need to be "debugged." Printing to screen is one of the best and easiest strategies for ensuring that your code is working as intended.
 
+{% highlight python %}
 >>> # Define a variable and print
 >>> a = 6
->>> print a
+>>> print(a)
 6
-
-```
+{% endhighlight %}
 
 You can more or less print anything to screen, and importantly you can print multiple things in the same statement!
 
-```python
-
+{% highlight python %}
 >>> # Define a variable and print
->>> mystring = "I am writing a full sentence here as a string variable
->>> print mystring
-I am writing a full sentence here as a string variable
+>>> mystring = "I am writing a full sentence here as a string variable."
+>>> print(mystring)
+I am writing a full sentence here as a string variable.
 
 >>> # print two strings together with + 
->>> print "Here is my string: " + mystring
+>>> print("Here is my string: " + mystring)
 
->>> + can only be used to join strings when printing
->>> print mystring  + 2
+>>> To concatenate values/variables when printing, they must be of the same type
+>>> print(mystring  + 2)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: cannot concatenate 'str' and 'int' objects
->>> print mystring  + "2"
-I am writing a full sentence here as a string variable2
-
->>> # Use , to print multiple variables, values of different types. Spaces will automatically be inserted.
->>> print "My variable contains", mystring, " Also, here's a number:", 888
-My variable contains I am writing a full sentence here as a string variable Also, here's a number: 888
-
-
-# More and more printing
->>> a = 55
->>> b = 44.6
->>> mylist = [1,2,3]
->>> print "oh man, I got some numbers:", a, "," b, ",", and even a list:", mylist, ", and even a string: ", mystring
-oh man, I got some numbers: 55 , 44.6 , and even a list: [1, 2, 3] , and even a string:  I am writing a full sentence here as a string variable
-```
-
+>>> print(mystring  + "2")
+I am writing a full sentence here as a string variable.2
+{% endhighlight %}
 
 
 ## Exercises 
@@ -447,39 +450,39 @@ oh man, I got some numbers: 55 , 44.6 , and even a list: [1, 2, 3] , and even a 
 Remember that **printing** is the only way to confirm if your code is behaving as expected. Print print print!
 
 
-1. Write a script to count the number of each nucleotide (A, C, G, T) in a provided sequence. Your script should use the function `raw_input()` to prompt users for a sequence (assumed to contain only A, C, G, T!), and the method ".count()" to count each nucleotide. Your script should print out the calculated nucleotide counts, for example:
+1. Write a script to count the number of each nucleotide (A, C, G, T) in a nucleotide sequence. You should define a variable containing a sequence (**hint**: this variable should be a string!), and you should use the method `.count()` to count each nucleotide. Your script should print out the calculated nucleotide counts, for example:
 
-    ```
-        Number of A: 10
-        Number of C: 5
-        Number of G: 9
-        Number of T: 8
-    ```    
+{% highlight python %}
+Number of A: 10
+Number of C: 5
+Number of G: 9
+Number of T: 8
+{% endhighlight %}   
 
-2. Modify your code from the previous exercise to compute the *percentages* (rather than counts) of each nucleotide in a user-provided sequence. As before, print out the calculated percentages.
+2. Modify your code from the previous exercise to compute the **percentages** (rather than counts) of each nucleotide in given sequence. As before, print out the calculated percentages.
 
 3. Define a variable called `mystring`, which contains a lengthy string of some kind (random letters, your address, song lyrics, a haiku, whatever). Perform the following tasks with this variable:
     + Use the `len()` function to determine how many characters are in your string.
     + Without changing your variable itself, replace the all occurrences of a letter of your choice with the number 6. Use the string method `.replace()` for this task.
-    + Redefine mystring such that only the first 3 occurrences of this letter are replaced, again using the string method `.replace()`. (*Hint*: not sure how to do this? Enter `help(replace)` in a Python interpretter session, or google how to use the `replace` method!).
+    + Redefine mystring such that only the first 3 occurrences of this letter are replaced, again using the string method `.replace()`. (**Hint**: not sure how to do this? Enter `help(replace)` in a Python interpretter session, or google how to use the `replace` method!).
     + Try to use indexing to replace the character in the 5th position of mystring with the letter "X". Did this work? Can you figure out why or why not?
     + Use the `.upper()` method to re-define your string variable to be entirely uppercase. Make sure your variable has been redefined by printing it out!
-    + Use the `.split()` method to split your string into a list. Do this two times, the first time using a character that *is* in your string and the second time using a character that *is not* present in your string. Think about why the resulting output looks the way it does.
+    + Use the `.split()` method to split your string into a list. Do this two times, the first time using a character that **is** in your string and the second time using a character that *is not* present in your string. Think about why the resulting output looks the way it does.
 
 
 4. Create a variable called `mylist`, which is a list of numbers (integers or floats, whatever you choose!). Perform the following tasks with this variable:
     + Use the `len()` function to determine how many entries are in your list.
     + Use the `.append()` method to add another number to the end of your list. For example, if you started with `[1, 2, 6, 7]`, you might now have `[1, 2, 6, 7, 3.3]`.
-    + Re-assign the 2nd entry (*hint*: which index is this?) of your list to the opposite sign of that entry (i.e. 4 would now be -4, -9 would now be 9).
-    + Re-assign the 1st entry of your list to be a *new list*. For example, if you started with `[1, 2, 6, 7]`, you might now have `[ [1,2,3], 2, 6, 7]`. Use the `len()` function to determine how long the list is now. Is it what you expected? Think about why or why not.
-    + Use the `len()` function to determine the length of this first entry within your list (*hint*: lots of indexing!).
+    + Re-assign the 2nd entry (**hint**: which index is this?) of your list to the opposite sign of that entry (i.e. 4 would now be -4, -9 would now be 9).
+    + Re-assign the 1st entry of your list to be a **new list**. For example, if you started with `[1, 2, 6, 7]`, you might now have `[ [1,2,3], 2, 6, 7]`. Use the `len()` function to determine how long the list is now. Is it what you expected? Think about why or why not.
+    + Use the `len()` function to determine the length of this first entry within your list (**hint**: lots of indexing!).
     
 
 5. Create a variable called `mydict`, which contains this dictionary (you can copy/paste!): `{"dna": "nucleotides", "rna": "nucleotides", "protein": "amino acids"}`.  Perform the following tasks with this variable:
     + Use dictionary indexing to print out the **value** associated with the key **"dna"**.
     + Add this new key:value pair to the dictionary: "molecule" is the key, and "atoms" is the value. 
     + Add this other new key:value pair to the dictionary: "dna":"ACGT". Print out the dictionary. What do you notice? What does the output tell you about dictionary keys and values?
-    + Create a new list variable which contains the *keys* in your dictionary. For this exercise, do not type out the keys - use the `.keys()` method.
+    + Create a new list variable which contains the **keys** in your dictionary. For this exercise, do not type out the keys - use the `.keys()` method.
     + Determine the length of the value associated with the dictionary key "dna". Do this procedure for each key in the dictionary, and calculate the average value length. Print this value to screen.
 
 

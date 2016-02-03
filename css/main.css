@@ -113,9 +113,11 @@ article p a {
 -  The content. -
 -------------------------------------------------------------------------*/
 ul {
-  list-style-position: inside;
+  list-style-position: outside;
   list-style-type: disc;
-  padding-left: 20px;
+  padding: 20px;
+  line-height: 1.6;
+  margin: 15px;
 }
 
 .main-content {
@@ -140,10 +142,17 @@ ul {
 }
 
 .main-content h3{
-   font-size:25px;
+   font-size:28px;
    margin-top: 50px;
    margin-bottom: 25px;
 }
+
+.main-content h4{
+   font-size:22px;
+   margin-top: 25px;
+   margin-bottom: 0;
+}
+
 
 .category {
     color: #ccc;
@@ -196,7 +205,7 @@ hr {
 pre, code {
     background: #FFFFF7;
     line-height: 1.3em;
-    padding: 0.05em;
+    padding: 0.2em;
     word-wrap: break-word;
 }
 
