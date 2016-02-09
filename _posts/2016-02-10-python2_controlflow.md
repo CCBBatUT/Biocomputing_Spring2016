@@ -6,7 +6,7 @@ permalink: /python2_controlflow/
 materials: files/python2_cheatsheet.pdf
 ---
 
-### Today's Goals:
+### Today's Goals
 1. Broadly understand the importance of logical decision making in computation
 2. Become familiar with for loops, if/else, and while statements
 3. Continue to use print statements to check output
@@ -50,8 +50,6 @@ Two divided by 5 is 0
 >>> 
 {% endhighlight %}
 
-- `input()` function allows the program to interact with the user
-{% highlight python %}
 
 
 # Decisions and conditions: For, If, While
