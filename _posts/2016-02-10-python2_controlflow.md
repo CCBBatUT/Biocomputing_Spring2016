@@ -3,7 +3,7 @@ layout: post
 title: "Python II: Control Flow"
 instructor: Becca
 permalink: /python2_controlflow/
-materials: files/python2.zip
+materials: files/python2_cheatsheet.pdf
 ---
 
 ~~~UNDER CONSTRUCTION~~~
@@ -45,7 +45,8 @@ Two divided by 5 is 0
 >>> 
 {% endhighlight %}
 
-
+- `input()` function allows the program to interact with the user
+{% highlight python %}
 
 
 # Decisions and conditions: For, If, While
