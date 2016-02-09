@@ -6,6 +6,8 @@ permalink: /python2_controlflow/
 materials: files/python2.zip
 ---
 
+UNDER CONSTRUCTION
+
 # Python 2: Loops!!
 
 
@@ -30,6 +32,7 @@ Two divided by 5 is 0.400000
 Two divided by 5 is 0.4
 >>> print "Two divided by 5 is %d" %(2.0/5)
 Two divided by 5 is 0
+
 {% endhighlight %}
 
 - `random` module is useful for generating fake data
@@ -73,6 +76,7 @@ A
 G
 C
 T
+
 {% endhighlight %}
 
 Let's try something a bit more complicated. Here we can do a repeat of a mathematical operation on items in a list. Note that the `x` `in for x in thing` can be whatever you want, you just have to be consistent within the loop.
@@ -95,6 +99,7 @@ GC content of ACGTCAGTATCGTATTTTA is 0.315789
 GC content of ACAGTCAGTGATCA is 0.428571
 GC content of AGT is 0.333333
 GC content of AGCTAGCTAGCTACGATGCTAGCTAGC is 0.518519
+
 {% endhighlight %}
 
 But, if you see in this code, there is a calculation that is repeated four times, so we should also use a for loop in this case too.
@@ -117,6 +122,7 @@ GC content of ACGTCAGTATCGTATTTTA is 0.315789
 GC content of ACAGTCAGTGATCA is 0.428571
 GC content of AGT is 0.333333
 GC content of AGCTAGCTAGCTACGATGCTAGCTAGC is 0.518519
+
 {% endhighlight %}
 
 Now we can check what is in our dictionary.
@@ -198,6 +204,7 @@ else:
 ...     print "GC content lower than 50%"
 ... 
 GC content lower than 50%
+
 {% endhighlight %}
 
 - IF and FOR together!
@@ -487,6 +494,7 @@ examples:
 
 - more examples
 
+{% highlight python %}
 >>> newseqs=[] #create an empty list
 >>> for i in range(100): #do this 100 times
 ...     int1=random.randint(0,1000) #choose a random integer
