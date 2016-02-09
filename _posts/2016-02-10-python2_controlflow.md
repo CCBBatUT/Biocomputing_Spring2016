@@ -186,7 +186,7 @@ Sum is greater than 20!
 
 - IF ELSE
 
-Adding an else to your statement allows the computer to decide what to do based on the conditional.
+Adding an else to your statement allows the computer to decide what to do when the conditional is False.
 
 {% highlight python %}
 if logical condition == True: 
