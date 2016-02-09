@@ -50,7 +50,7 @@ Two divided by 5 is 0
 
 # Decisions and conditions: For, If, While
 
-Remember: we program for Repeatability, Reliability, and Automation.
+Remember: we program for Repeatability, Speed, and Automation. Using decisions and conditions we can automate a logical procession of actions.
 
 
 ## For loops
@@ -82,7 +82,7 @@ T
 Let's try something a bit more complicated. Here we can do a repeat of a mathematical operation on items in a list. Note that the `x` in `for x in thing` can be whatever you want, you just have to be consistent within the loop.
 
 {% highlight python %}
->>>sequences=['AGTCTA','AGTCAGTCAGTCAGT','ACTAGCTAGCTA','ACGTCAGTATCGTATTTTA','ACAGTCAGTGATCA','AGT','AGCTAGCTAGCTACGATGCTAGCTAGC'] #create our list
+>>> sequences=['AGTCTA','AGTCAGTCAGTCAGT','ACTAGCTAGCTA','ACGTCAGTATCGTATTTTA','ACAGTCAGTGATCA','AGT','AGCTAGCTAGCTACGATGCTAGCTAGC'] #create our list
 >>> for seq in sequences: #for each sequence in the list
 ...     length=len(seq) #calculate the length
 ...     Gcontent=seq.count('G') #count the number of Gs
@@ -105,8 +105,8 @@ GC content of AGCTAGCTAGCTACGATGCTAGCTAGC is 0.518519
 But, if you see in this code, there is a calculation that is repeated four times, so we should also use a for loop in this case too.
 
 {% highlight python %}
->>>GCdict={} #create an empty dictionary that we will fill with GCcontent values
->>>for seq in sequences:
+>>> GCdict={} #create an empty dictionary that we will fill with GCcontent values
+>>> for seq in sequences:
 ...     seqdict={} #create another empty dictionary to *temporarily* store ACGT counts
 ...     length=len(seq)
 ...     for nuc in ['A','G','C','T']: #for each nucleotide
