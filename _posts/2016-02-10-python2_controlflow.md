@@ -77,7 +77,7 @@ T
 
 {% endhighlight %}
 
-Let's try something a bit more complicated. Here we can do a repeat of a mathematical operation on items in a list. Note that the `x` `in for x in thing` can be whatever you want, you just have to be consistent within the loop.
+Let's try something a bit more complicated. Here we can do a repeat of a mathematical operation on items in a list. Note that the `x` in `for x in thing` can be whatever you want, you just have to be consistent within the loop.
 
 {% highlight python %}
 >>>sequences=['AGTCTA','AGTCAGTCAGTCAGT','ACTAGCTAGCTA','ACGTCAGTATCGTATTTTA','ACAGTCAGTGATCA','AGT','AGCTAGCTAGCTACGATGCTAGCTAGC'] #create our list
@@ -190,7 +190,7 @@ if logical condition == True:
 	do this command  
 	do this command
 else:
-	do this command
+	do that command
 {% endhighlight %}
 
 
@@ -208,10 +208,12 @@ GC content (0.35) is lower than 0.50
 
 - IF and FOR together!
 
-Using conditionals and for loops together makes your code very powerful. Let's take our fake genome we made in the random module example above and randomly select 100 random-length subsequences from it.
+Using conditionals and for loops together makes your code very powerful. 
 
-Print 25-bp kmers from a randomly generated sequence
+
 {% highlight python %} 
+# Print 25-bp kmers from a randomly generated sequence
+# (a kmer is an overlapping segment of a DNA sequence)
 import random
 >>> dna='AGCT'
 >>> random.choice(dna)
@@ -264,6 +266,7 @@ A
 
 >>> for i in range(len(seq)):
 ...     if len(seq[i:i+25]) < 25:
+...             print 'too short! Exiting!'
 ...             break  # if it does not meet this condition, for loop ends.
 ...     else:
 ...             print seq[i:i+25]
@@ -290,7 +293,7 @@ CGGTATTATAAGAATATCCTAGGAA
 >>> for i in range(len(seq)):
 ...     if len(seq[i:i+25]) < 25:
 ...             print 'too short! continuing'
-...             continue
+...             continue # instead of ending the for loop, continue will just skip this one iteration
 ...     else:
 ...             print seq[i:i+25]
 ... 
@@ -494,6 +497,7 @@ examples:
 - more examples
 
 {% highlight python %}
+# Let's take our fake genome we made in the random module example above and randomly select 100 random-length subsequences from it.
 >>> newseqs=[] #create an empty list
 >>> for i in range(100): #do this 100 times
 ...     int1=random.randint(0,1000) #choose a random integer
