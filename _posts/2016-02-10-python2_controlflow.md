@@ -6,8 +6,6 @@ permalink: /python2_controlflow/
 materials: files/python2_cheatsheet.pdf
 ---
 
-~~~UNDER CONSTRUCTION~~~
-
 ### Today's Goals:
 1. Broadly understand the importance of logical decision making in computation
 2. Become familiar with for loops, if/else, and while statements
