@@ -43,7 +43,7 @@ layout: default
                  <td align="left"> <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> </td>
                  <td> <a href="{{ post.cheatsheet }}">Cheatsheet</a></td> 
                  <td> <a href="{{ post.materials }}">All Files</a></td> 
-                 <td> <a href="{{ post.instructor }}">Instructor</a></td> 
+                 <td> {{ post.instructor }} </td> 
               </tr>   
 
         {% endfor %}
