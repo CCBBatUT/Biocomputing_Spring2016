@@ -468,11 +468,9 @@ import random
 ... 	seq.append(random.choice(dna))
 ...
 # much faster:
->>>seq=[random.choice(dna) for i in range(100)]
+>>> seq=[random.choice(dna) for i in range(100)]
 
-{% endhighlight %}
-
-{% highlight python %}
+# more examples
 >>> sequences=['AGTCTA','AGTCAGTCAGTCAGT','ACTAGCTAGCTA','ACGTCAGTATCGTATTTTA','ACAGTCAGTGATCA','AGT','AGCTAGCTAGCTACGATGCTAGCTAGC']
 >>> mylist=[len(seq) for seq in sequences]
 >>> mylist
