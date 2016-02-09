@@ -411,6 +411,7 @@ Here we manipulate the conditional (x) within the loop. Could you do this with a
 500 is even!
 125 is not even!
 32 is even! 
+
 {% endhighlight %}
 
 
@@ -418,7 +419,7 @@ Here we manipulate the conditional (x) within the loop. Could you do this with a
 
 List comprehensions are faster ways to execute loops that result in lists. Your typical loop structure is shown below followed by the comprehension structure.
 
-{% endhighlight %}
+{% highlight python %}
 list1=[] #make empty list
 for item in thing:
 	list1.append(item)	
