@@ -204,7 +204,6 @@ GC content lower than 50%
 
 Using conditionals and for loops together makes your code very powerful. Let's take our fake genome we made in the random module example above and randomly select 100 random-length subsequences from it.
 
-{% highlight python %}
 Print 25-bp kmers from a randomly generated sequence
 {% highlight python %} 
 import random
