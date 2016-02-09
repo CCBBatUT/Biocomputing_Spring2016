@@ -57,7 +57,7 @@ Two divided by 5 is 0
 
 A for loop is a way to iterate through a list, range, dictionary, string, etc. Use it for whenever you are repeating something.
 
-{% highlight %}
+{% highlight python %}
 for item in thing: #line leading to an indented block ends with a colon
 	do this command #indenting blocks of code indicates how the program flows
 	do that command
