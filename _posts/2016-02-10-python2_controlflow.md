@@ -57,10 +57,10 @@ A for loop is a way to iterate through a list, range, dictionary, string, etc. U
 
 {% highlight python %}
 for item in thing: #line leading to an indented block ends with a colon
-	do this command #indenting blocks of code indicates how the program flows
-	do that command
+	do something with item #indenting blocks of code indicates how the program flows
+	do other actions with item
 	#return to for statement and move to next item
-continue with main commands
+continue with other commands
 {% endhighlight %}
 
 Ok, let's test this out with the print statement. Use this statement in for loops often to check for errors and make sure that everything is working as you would expect.
@@ -206,6 +206,56 @@ GC content (0.35) is lower than 0.50
 
 {% endhighlight %}
 
+
+
+You can do nested if/else statements.
+
+{% highlight python %}
+if logical condition == True: 
+	do this command  
+	do this command
+else:
+	if logical condition == True: 
+		do this command  
+		do this command
+	else:
+		do this command
+{% endhighlight %}
+
+
+
+{% highlight python %}
+
+
+{% endhighlight %}
+
+But, wait, wasn't that a terribly long way to do something? Yes it was! Here is a better way:
+
+- IF ELIF
+
+The if/elif statement can be used when you would otherwise use multiple nested if/else statements. They are performed *in order* and will not go through all of the options if one before the end is True.
+
+
+{% highlight python %}
+if logical condition == True: 
+	do this command  
+	do this command
+elif other logical condition == True:
+	do this command
+elif other logical condition == True:
+	do this command
+else:
+	do this command
+{% endhighlight %}
+
+
+
+{% highlight python %}
+
+
+{% endhighlight %}
+
+
 - IF and FOR together!
 
 Using conditionals and for loops together makes your code very powerful. 
@@ -300,53 +350,6 @@ CGGTATTATAAGAATATCCTAGGAA
 
 {% endhighlight %}
 
-
-You can do nested if/else statements.
-
-{% highlight python %}
-if logical condition == True: 
-	do this command  
-	do this command
-else:
-	if logical condition == True: 
-		do this command  
-		do this command
-	else:
-		do this command
-{% endhighlight %}
-
-
-
-{% highlight python %}
-
-
-{% endhighlight %}
-
-But, wait, wasn't that a terribly long way to do something? Yes it was! Here is a better way:
-
-- IF ELIF
-
-The if/elif statement can be used when you would otherwise use multiple nested if/else statements. They are performed *in order* and will not go through all of the options if one before the end is True.
-
-
-{% highlight python %}
-if logical condition == True: 
-	do this command  
-	do this command
-elif other logical condition == True:
-	do this command
-elif other logical condition == True:
-	do this command
-else:
-	do this command
-{% endhighlight %}
-
-
-
-{% highlight python %}
-
-
-{% endhighlight %}
 
 - Important tip: You can make a dictionary without knowing/defining a priori what they keys are
 
