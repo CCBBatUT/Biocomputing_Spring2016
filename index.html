@@ -32,7 +32,6 @@ layout: default
             <tr>
                 <th>Date</th> 
                 <th>Topic</th>
-                <th>Cheatsheet</th>
                 <th>Materials (Download Link)</th>
                 <th>Instructor</th>
             </tr>
@@ -41,8 +40,7 @@ layout: default
              <tr>
                  <td> {{ post.date | date: '%B %d, %Y' }} </t>
                  <td align="left"> <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> </td>
-                 <td> <a href="{{ post.cheatsheet }}">Cheatsheet</a></td> 
-                 <td> <a href="{{ post.materials }}">All Files</a></td> 
+                 <td> <a href="{{ post.materials }}">Cheatsheet and Files</a></td> 
                  <td> {{ post.instructor }} </td> 
               </tr>   
 
