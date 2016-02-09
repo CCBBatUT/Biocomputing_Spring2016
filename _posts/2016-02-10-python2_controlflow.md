@@ -6,9 +6,7 @@ permalink: /python2_controlflow/
 materials: files/python2.zip
 ---
 
-UNDER CONSTRUCTION
-
-# Python 2: Loops!!
+~~~UNDER CONSTRUCTION~~~
 
 
 
@@ -198,12 +196,13 @@ else:
 
 {% highlight python %}
 >>> dna='AGTCTGTAGTCTATAGA'
->>> if (dna.count('G') + dna.count('C'))/len(dna) > 0.5:
-...     print "GC content higher than 50%"
+>>> GC=(dna.count('G') + dna.count('C'))/float(len(dna))
+>>> if GC > 0.5:
+...     print "GC content (%.2f) is higher than 0.50" %GC
 ... else:
-...     print "GC content lower than 50%"
+...     print "GC content (%.2f) is lower than 0.50" %GC
 ... 
-GC content lower than 50%
+GC content (0.35) is lower than 0.50
 
 {% endhighlight %}
 
