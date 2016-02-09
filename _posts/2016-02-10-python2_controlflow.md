@@ -13,9 +13,7 @@ materials: files/python2_cheatsheet.pdf
 4. Try out list comprehensions
 
 
-
-First, some useful tools
-
+#### First, some useful tools
 - using `%` notation in print statements makes for better output
 
 	%d: insert number here <br>
