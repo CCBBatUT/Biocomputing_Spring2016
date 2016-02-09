@@ -4,7 +4,7 @@ title: "Python II: Control Flow"
 instructor: Becca
 permalink: /python2_controlflow/
 materials: files/python2.zip
-cheatsheet: files/Cheatsheet_Python2_loops.md
+cheatsheet: files/python2/Cheatsheet_Python2_loops.md
 ---
 
 ~~~UNDER CONSTRUCTION~~~
