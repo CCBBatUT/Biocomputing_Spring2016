@@ -269,7 +269,8 @@ import random
 'G'
 >>> seq=[]
 >>> for i in range(100):
-...		seq.append(random.choice(dna))
+... 	seq.append(random.choice(dna))
+...
 >>> seq="".join(seq)
 >>> seq
 'CGCGCAAAGACCGTTTTTGGCTGCCCAGGATCTCCCGGCTAGGGTATGAGGCCACCAAAAACAGACGGTTCGGCCCGGTATTATAAGAATATCCTAGGAA'
@@ -413,7 +414,7 @@ while x not in range(0,11): #if input was not number between 1 and 10
 print "Thanks!" #thanks the user for being a nice user
 {% endhighlight %}
 
-Here we manipulate the conditional (x) within the loop. Could you do this with a for loop? Why is the last number less than 40?
+Here we manipulate part of the conditional (x) within the loop. Could you do this with a for loop? Why is the last number less than 40?
 {% highlight python %} 
 >>> x=2000
 >>> while x > 40:
@@ -460,6 +461,13 @@ examples:
 [0, 1, 8, 27, 64, 125, 216, 343, 512, 729, 1000, 1331, 1728, 2197, 2744, 3375, 4096, 4913, 5832, 6859]
 
 # from the for loop above
+import random
+>>> dna='AGCT'
+>>> seq=[]
+>>> for i in range(100):
+... 	seq.append(random.choice(dna))
+...
+# much faster:
 >>>seq=[random.choice(dna) for i in range(100)]
 
 {% endhighlight %}
