@@ -230,7 +230,7 @@ The concept of *scope* is very important in computer programming. For a given ob
 
 ## Modules
 
-Like other language, Python has **modules** which can be imported for specific functionality. For example, last week we used the [`random`]({{ site.url}} /python2_controlflow/) module to generate random DNA sequences. Modules are, actually, Python scripts which contain related functions. 
+Like other language, Python has **modules** which can be imported for specific functionality. For example, last week we used the [`random`]({{ base.url}}/Biocomputing_Spring2016/python2_controlflow/) module to generate random DNA sequences. Modules are, actually, Python scripts which contain related functions. 
 
 This means we can write our own modules! Why would you do this? Let's say you have several scripts which all perform similar tasks, and therefore require the same functions. One way to do this is simply to include your functions in every script. An alternative (and dare-I-say, better?) strategy is to create a stand-alone python script which contains only functions - this is a module! You can then import this module into the scripts which use these functions. This strategy will help ensure that you don't accidentally introduce bugs from copy/pasting the function, and more importantly allows you to change the function *only one time* as opposed to individually in each script where it's used (no matter how diligent you are, the latter strategy **will** introduce bugs!). 
 
