@@ -220,6 +220,57 @@ divide(x, y, as_float=True, digits=3, print_sentence=False, return_remainder=Fal
         4. return_remainder: return the remainder between between x and y in addition to the dividend (Default: False)
 {% endhighlight %}
 
+
+### Dealing with poor function input
+
+Generally, we write functions to accomplish a specific task, such as dividing two numbers as described above. However, there are ways for this to go wrong, for instance dividing by zero:
+{% highlight python %}
+divide(5, 0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 2, in divide
+ZeroDivisionError: integer division or modulo by zero
+{% endhighlight %}
+
+Or, perhaps the function is poorly documented and users don't know that it requires arguments to be numbers (this is a trivial example, but goes to show that the wrong **type** of input can cause lots of problems).
+{% highlight python %}
+divide("five", "ten")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 2, in divide
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+{% endhighlight %}
+
+We can catch specific errors with `if` statements, for example:
+
+{% highlight python %}
+def divide(x, y):
+    acceptable_types = [int, float]
+    if type(x) in acceptable_types and type(y) in acceptable_types:
+        return x/y
+    else:
+        print "Cannot compute!"
+        return None
+{% endhighlight %}
+
+However, this `if` only captures one type of input problem, namely when the input arguments are not floats or integers. To catch *any* problem, we can use a construct called **`try/except`**. Syntactically, these statements looks like `if/else` statements. Their purpose is to allow Python to proceed even if errors happen:
+{% highlight python %}
+def divide(x, y):
+    try:
+        div = x/y
+    except: # if an error is thrown, *within* the try statement, then we go t
+        div = None
+    return div
+{% endhighlight %}
+
+If the code inside the `try` block throws an error of any kind, then code within the `except` block will be executed. Note that `try` **must** have a corresponding `except` statement! If you just want to skip over any errors without putting any explicit code in `except`, use the `pass` statement, for example:
+{% highlight python %}
+try:
+    # code that might or might not work
+except:
+    pass
+{% endhighlight %}
+
 ## Scope in Python
 
 The concept of *scope* is very important in computer programming. For a given object, the scope of that object refers to where in the computer program the object's name can be used to refer to its value. In other words, if I define a variable `my_variable`, will Python always know what `my_variable` is? Python is quite flexible in this regard (other languages are not!). The most important point to remember is that Python scope goes top-down: If a variable is defined at the top of a script, then throughout the rest of the script Python knows what that variable is. This is why functions are generally written at the top of a script, so that the functions can be used throughout the main body of a script.
@@ -237,3 +288,8 @@ This means we can write our own modules! Why would you do this? Let's say you ha
 ## Interpreting Error Messages
 
 Although Python error messages might seem initially cryptic, they actually contain lots of useful information! [Follow this link](http://cdn.rawgit.com/sjspielman/ccbb_bigdata2015_python/master/cheatsheets/error_messages_informative.html) to read about interpreting error messages for debugging your code.
+
+
+## Exercises
+
+Download [this Python script](../files/python3/functions_homework.py) (also available for download with today's Cheatsheet, see home page), which contains poorly-organized Python code in need of modularization! Your task is to rearrange this script such that it contains functions, as described within the script, and is modular!
