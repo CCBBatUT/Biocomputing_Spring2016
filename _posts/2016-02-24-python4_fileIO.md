@@ -15,7 +15,7 @@ Now that you can make functions, it's time to learn how to use them to manipulat
 1. Read files line by line in python 
 2. Write output from python to a file
 3. Use the `sys` module to take arguments from the command line 
-4. Use the `re` module to search file contents
+4. Use the `re` module *briefly* to search file contents
 5. Use the `os` module to perform the same script on various files in a directory
 
 
@@ -108,7 +108,8 @@ with open("file.txt", "r") as f:
 ## File parsing
 
 Several examples of file parsing are available in [python4_files](python4_files/). Please go ahead and download these files. 
-<br>
+
+
 The file `parse_delimited.py` contains examples for parsing and extracting information from csv and tab-delimited files (AbilAhuG_uniprot_blastx.txt and AbilAhuG_uniprot_blastx.csv). Note that these are the same file, except one is tab-delimited and one is comma-delimited.
 <br>
 The `parse_hyphy.py` file has four versions of a script that custom parses an output file from the program Hyphy. This is so you can see how writing a script progresses as it is refined.
