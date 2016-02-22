@@ -23,14 +23,16 @@ Now that you can make functions, it's time to learn how to use them to manipulat
 To interact with files in python, you must open the file and assign it to a variable - this is now a python file object. All operations on the contents of a file must be done using this variable (not the file name itself!). Once all operations are finished, the file must be closed. Importantly, your computer's operating system limits the number of files which can be open at once (type the command `ulimit -n` to the command line to see how many), so it is very important to always close files when you are finished.
 
 There are two basic ways to open and close files. Note that these two chunks of code are equivalent in their output.
-{% highlight python %}
 
-# Open and close with open() and close()
+Open and close with open() and close()
+{% highlight python %}
 file_handle = open("important_file.txt", "r") # Open as read-only
 contents = file_handle.readlines() # Read contents of file and save as a list
 file_handle.close() # Close file when finished (important!!)
+{% endhighlight %}
 
-# Open with the *with* control flow command. The file automatically closes outside the scope of the with. This is what I prefer to use.
+Open with the *with* control flow command. The file automatically closes outside the scope of the with. This is what I prefer to use.
+{% highlight python %}
 with open("important_file.txt", "r") as file_handle:
   contents = file_handle.readlines()
 {% endhighlight %}
@@ -42,8 +44,10 @@ The `open()` function takes two arguments: i) the *name* (including full or rela
 file_handle = open("file_to_fill.txt", "w") # Open file for writing
 file_handle.write("I'm writing a sentence to this file!")
 file_handle.close()
+{% endhighlight %}
 
-# Open a file for appending, and append text to it
+Open a file for appending, and append text to it
+{% highlight python %}
 file_handle = open("file_to_fill.txt", "a")
 file_handle.write("I'm writing another line to this existing file!")
 file_handle.close()
@@ -102,23 +106,11 @@ with open("file.txt", "r") as f:
 
 ## File parsing
 
-Here is a simple example where we would like to find certain information from a file and save it to a new file. 
-{% highlight python %}
+The file `parse_delimited.py` contains examples for parsing and extracting information from csv and tab-delimited files. It parses the data files AbilAhuG_uniprot_blastx.txt and AbilAhuG_uniprot_blastx.csv (note that these are the same file, except one is tab-delimited and one is comma-delimited).
 
-with open('hyphy_output_long.txt','r') as f:
-	lines = f.readlines()
-	
-sites=[]
-for line in lines:
-	if "Site" in line:
-		
-		sites.append(line)
-
-{% endhighlight %}
-
-Several examples of file parsing are available in [python4_files](python4_files/).
-The file [parse_delimited.py](python4_files/parse_delimited.py) contains examples for parsing and extracting information from csv and tab-delimited files. It parses the data files [AbilAhuG\_uniprot\_blastx.txt](./python4_files/AbilAhuG_uniprot_blastx.txt) and [AbilAhuG\_uniprot\_blastx.csv](./python4_files/AbilAhuG_uniprot_blastx.csv) (note that these are the same file, except one is tab-delimited and one is comma-delimited).
-The file [parse_custom.py](./python4_files/parse_custom.py) contains an example parser for a file with non-canonical formatting, [hyphy_output_long.txt](./python4_files/hyphy_output_long.txt).
+Several examples of file parsing are available in [python4_files](python4_files/). Please go ahead and download these files. 
+The file `parse_delimited.py` contains examples for parsing and extracting information from csv and tab-delimited files. It parses the data files AbilAhuG_uniprot_blastx.txt and AbilAhuG_uniprot_blastx.csv (note that these are the same file, except one is tab-delimited and one is comma-delimited).
+The `hyphy.py` file has three versions of a script that custom parses an output file from the program Hyphy. This is so you can see how writing a script progresses before it is refined.
 
 An integral aspect of this file parsing is the **re module**. This python module provides functions for using **regular expressions**. Regular expressions are essentially flexible pattern-matching symbols (see the lesson [cheatsheet](../../Cheatsheets/Cheatsheet_Python4.md) for some commonly-used regex's. The re module, and indeed regular expressions in general, are extremely powerful and endlessly useful. Note that the re module has many, many more available functions associated with it (see the [re module documentation](https://docs.python.org/2/library/re.html)) beyond what is discussed here!!
 
