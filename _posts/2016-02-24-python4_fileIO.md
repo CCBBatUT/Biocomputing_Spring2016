@@ -6,8 +6,6 @@ permalink: /python4_fileio/
 materials: files/python4.zip
 ---
 
-~~~~ Under Construction ~~~~
-
 
 Now that you can make functions, it's time to learn how to use them to manipulate other files.
 
