@@ -85,7 +85,7 @@ with open("file.txt", "r") as f:
 
 ## The csv module
 
-The **csv module** is a useful python module for parsing comma-separated files, tab-delimited files, or any files with delimited *fields*. The csv module provides functions for parsing a file which has already been opened using `open()`. Note that the .reader() method returns an *iterator* object, which is faster than .readlines(), but similar to for-looping over file contents.
+The **csv module** is a useful python module for parsing comma-separated files, tab-delimited files, or any files with delimited *fields*. The csv module provides functions for parsing a file which has already been opened using `open()`. Note that the `.reader()` method returns an *iterator* object, which is faster than .readlines(), but similar to for-looping over file contents.
 
 {% highlight python %}
 import csv
@@ -106,10 +106,10 @@ with open("file.txt", "r") as f:
 
 ## File parsing
 
-The file `parse_delimited.py` contains examples for parsing and extracting information from csv and tab-delimited files. It parses the data files AbilAhuG_uniprot_blastx.txt and AbilAhuG_uniprot_blastx.csv (note that these are the same file, except one is tab-delimited and one is comma-delimited).
-
 Several examples of file parsing are available in [python4_files](python4_files/). Please go ahead and download these files. 
-The file `parse_delimited.py` contains examples for parsing and extracting information from csv and tab-delimited files. It parses the data files AbilAhuG_uniprot_blastx.txt and AbilAhuG_uniprot_blastx.csv (note that these are the same file, except one is tab-delimited and one is comma-delimited).
+
+The file `parse_delimited.py` contains examples for parsing and extracting information from csv and tab-delimited files (AbilAhuG_uniprot_blastx.txt and AbilAhuG_uniprot_blastx.csv). Note that these are the same file, except one is tab-delimited and one is comma-delimited.
+
 The `hyphy.py` file has three versions of a script that custom parses an output file from the program Hyphy. This is so you can see how writing a script progresses before it is refined.
 
 An integral aspect of this file parsing is the **re module**. This python module provides functions for using **regular expressions**. Regular expressions are essentially flexible pattern-matching symbols (see the lesson [cheatsheet](../../Cheatsheets/Cheatsheet_Python4.md) for some commonly-used regex's. The re module, and indeed regular expressions in general, are extremely powerful and endlessly useful. Note that the re module has many, many more available functions associated with it (see the [re module documentation](https://docs.python.org/2/library/re.html)) beyond what is discussed here!!
