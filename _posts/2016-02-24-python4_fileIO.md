@@ -103,7 +103,7 @@ with open("file.txt", "r") as f:
 		
 {% endhighlight %}
 
-## File parsing
+## File parsing ##
 
 Several examples of file parsing are available in [python4_files](python4_files/). Please go ahead and download these files. 
 
@@ -116,6 +116,17 @@ The `parse_hyphy.py` file has four versions of a script that custom parses an ou
 
 You may want to use more regular expressions while parsing data. These are found in the **re module**, which I am not covering in detail today. **Regular expressions** are essentially flexible pattern-matching symbols (see the lesson Cheatsheet) for some commonly-used regex's. The `re` module, and indeed regular expressions in general, are extremely powerful and endlessly useful. Note that the `re` module has many, many more available functions associated with it (see the [re module documentation](https://docs.python.org/2/library/re.html)) beyond what is discussed here!! Several examples of `re` functions used to parse the file `mammal_dat.nex` are shown in the file `parse_mammals.py`.
 
+
+## Homework ##
+
+The file `AbilAhuG_uniprot_blastx.csv` has a few columns with poorly-formatted data. We want to fix these columns and print to a new file. Starting with some of the commands in the file `parser_delimted.py`, do the following:
+	1. Read in the whole file and save it as a list
+	2. Remove the last column ('N/A') from each row
+	3. Split the second to last column (e.g. "Keratin, type I cytoskeletal 16 OS=Mus musculus GN=Krt16 PE=1 SV=3") by Gene name, organism, gene code, and PE, SV values. You will have to be somewhat creative in how you do this. Think about using string indexing and/or the `re` module. Converted column format should read: "Keratin, type I cytoskeletal 16", "Mus musculus", "Krt16", "1", "3". Think about what is constant in this column throughout all rows and use this to help you parse.
+	4. Create a new header for the file based on the new column contents
+	5. Write the altered file contents to a new csv file using the csv.writer() method
+
+Bonus: Write your own custom parser for a file type you deal with often.
 
 
 
