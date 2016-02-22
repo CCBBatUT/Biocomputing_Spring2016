@@ -107,11 +107,11 @@ with open("file.txt", "r") as f:
 ## File parsing
 
 Several examples of file parsing are available in [python4_files](python4_files/). Please go ahead and download these files. 
-
+<br>
 The file `parse_delimited.py` contains examples for parsing and extracting information from csv and tab-delimited files (AbilAhuG_uniprot_blastx.txt and AbilAhuG_uniprot_blastx.csv). Note that these are the same file, except one is tab-delimited and one is comma-delimited.
-
+<br>
 The `hyphy.py` file has three versions of a script that custom parses an output file from the program Hyphy. This is so you can see how writing a script progresses before it is refined.
-
+<br>
 An integral aspect of this file parsing is the **re module**. This python module provides functions for using **regular expressions**. Regular expressions are essentially flexible pattern-matching symbols (see the lesson [cheatsheet](../../Cheatsheets/Cheatsheet_Python4.md) for some commonly-used regex's. The re module, and indeed regular expressions in general, are extremely powerful and endlessly useful. Note that the re module has many, many more available functions associated with it (see the [re module documentation](https://docs.python.org/2/library/re.html)) beyond what is discussed here!!
 
 Several examples of `re` functions used to parse the file [mammal\_dat.nex](python4_files/mammal_dat.nex) are shown in the file [parse\_mammals.py](python4_files/parse_mammals.py) .
