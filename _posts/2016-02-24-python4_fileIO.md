@@ -119,7 +119,7 @@ You may want to use more regular expressions while parsing data. These are found
 
 ## Homework ##
 
-The file `AbilAhuG_uniprot_blastx.csv` has a few columns with poorly-formatted data. We want to fix these columns and print to a new file. Starting with some of the commands in the file `parser_delimted.py`, do the following:
+The file `AbilAhuG_uniprot_blastx.csv` has a few columns with poorly-formatted data. We want to fix these columns and print to a new file. Starting with some of the commands in the file `parser_delimited.py`, do the following:
 - Read in the whole file and save it as a list
 - Remove the last column ('N/A') from each row
 - Split the second to last column (e.g. "Keratin, type I cytoskeletal 16 OS=Mus musculus GN=Krt16 PE=1 SV=3") by Gene name, organism, gene code, and PE, SV values. You will have to be somewhat creative in how you do this. Think about using string indexing and/or the `re` module. Converted column format should read: "Keratin, type I cytoskeletal 16", "Mus musculus", "Krt16", "1", "3". Think about what is constant in this column throughout all rows and use this to help you parse.
