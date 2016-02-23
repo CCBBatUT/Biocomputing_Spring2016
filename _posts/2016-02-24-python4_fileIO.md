@@ -26,7 +26,7 @@ There are two basic ways to open and close files. Note that these two chunks of 
 Open and close with open() and close()
 {% highlight python %}
 file_handle = open("important_file.txt", "r") # Open as read-only
-contents = file_handle.readlines() # Read contents of file and save as a list
+contents = file_handle.readlines() # Read contents of file and save to contents variable
 file_handle.close() # Close file when finished (important!!)
 {% endhighlight %}
 
@@ -58,7 +58,7 @@ file_handle.close()
 When interacting with files, we usually want to examine and perform computations with the file content. To do this, we need to read in the file contents after opening the file. There are two basic file methods, `.readlines()` and `.read()`, that exist in native Python for this purpose. Both of these read in the entire file and save it either as a list (using newline characters to separate lines) or as a long string. If you have a large file you may just want to loop through it line by line without using either of these methods.
 
 {% highlight python %}
-# Read file line-by-line with .readlines() [Note that this is slow for *MASSIVE* files because it reads in and stores the whole file as a list]
+# Read file line-by-line with .readlines() [Note that this is slow for *MASSIVE* files because it reads in and stores the whole file]
 with open("file.txt", "r") as f:
     lines = f.readlines()
     for line in lines:
@@ -75,7 +75,7 @@ with open("file.txt", "r") as f:
     for line in contents_list:
         print line
         
-# To go line by line, you could also use a simple for loop. This avoids saving the whole file as a list.
+# To go line by line, you could also use a simple for loop. This avoids saving the whole file.
 with open("file.txt", "r") as f:
     for line in f:
         print line
