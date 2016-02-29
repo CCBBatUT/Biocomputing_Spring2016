@@ -106,6 +106,23 @@ Biopython supports sequence records to file in a format that you can specify:
 >>> SeqIO.write(lots_of_records, "lots_of_records.phy", "phylip")
 {% endhighlight %}
 
+<br>
+Note that, in many circumstances, it is easiest to write sequences to file using regular file writing, in particular if you want to save in FASTA format. This will require looping over a list (or dictionary!) which contains the sequences to write.
+{% highlight python %}
+>>> # Assume sequence_records is a list of biopython objects.
+>>> output_file = "sequences.fasta"
+>>> with open(output_file, "w") as outf:
+...    for record in sequence_records:
+...        outf.write(">" + str(record.id) + "\n" + str(record.seq) + "\n")
+
+>>> # Now sequence_records is a dictionary containing {id:sequence, id:sequence...}
+>>> output_file = "sequences.fasta"
+>>> with open(output_file, "w") as outf:
+...    for record in sequence_records:
+...        outf.write(">" + record + "\n" + sequence_records[record] + "\n")
+{% endhighlight %}        
+
+
 
 ## Converting file formats
 Biopython makes it very straight-forward to convert between sequence file formats - simply read in a file and write it out in the new format, or use the handy .convert() method. Again, these methods work with both `AlignIO()` and `SeqIO()`.
