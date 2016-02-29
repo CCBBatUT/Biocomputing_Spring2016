@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Python VI: Sequence Analysis with Biopython"
+title: "Python V: Sequence Analysis with Biopython"
 instructor: Stephanie
 permalink: /python6_biopython/
 materials: files/python6.zip
