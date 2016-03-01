@@ -2,12 +2,17 @@
 layout: post
 title: "Python V: Sequence Analysis with Biopython"
 instructor: Stephanie
-permalink: /python6_biopython/
-materials: files/python6.zip
+permalink: /python5_biopython/
+materials: files/python5.zip
 ---
 
 Biopython is a tour-de-force Python library which contains a variety of modules for analyzing and manipulating biological data in Python. While this library has lots of functionality, it is primarily useful for dealing with sequence data and querying online databases (such as NCBI or UniProt) to obtain information about sequences.
 This [online tutorial](http://biopython.org/DIST/docs/tutorial/Tutorial.html) describes nearly all the capabilities (with examples!) of things to do with Biopython (`ctrl+F` is your friend here!). 
+
+## Download and install
+
+You may need to download and install Biopython on your system. Instructions for this step are available [here](ccbbatut.github.io/Biocomputing_Spring2016/files/install_biopython.pdf).
+
 
 ## Reading and parsing sequence files
 
