@@ -11,7 +11,7 @@ This [online tutorial](http://biopython.org/DIST/docs/tutorial/Tutorial.html) de
 
 ## Download and install
 
-You may need to download and install Biopython on your system. Instructions for this step are available [here](ccbbatut.github.io/Biocomputing_Spring2016/files/install_biopython.pdf).
+You may need to download and install Biopython on your system. Instructions for this step are available [here]({{ site.baseurl }}{{ post.url }}/files/install_biopython.pdf).
 
 
 ## Reading and parsing sequence files
