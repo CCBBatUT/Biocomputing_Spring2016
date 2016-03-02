@@ -318,7 +318,19 @@ The above CDS feature information tells us that the coding sequence record in NC
 
 
 
+## Practice Exercises
 
+1. Using the included `pb2.fasta` alignment file, create a new alignment file (also in FASTA format) containing the sequences converted into their reverse complements. For this exercise, try using a dictionary structure to loop over the data. Also, you may find the Biopython `.reverse_complement()` helpful! Try saving the file and/or converting the resulting file to a different alignment format, such as phylip or Stockholm (see [here](http://biopython.org/wiki/AlignIO#File_Formats) for available alignment formats in Biopython).
+
+2. In the `pb2.fasta` file, you'll notice that some of the IDs begin with `"Hu_"` and others begin with `"Av_"`. These indicators tell you whether or not the pb2 sequence is from an influenza strain that infects humans (Hu) or avians (Av). For this exercise, determine the difference in average GC content between human-infecting and avian-infecting sequences. For this exercise, you will need to use the string method `.startswith("XXX")` to determine if a given sequence ID is human- or avian-infecting. This method returns True or False depending if a given sting starts with the provided argument. For example:
+{% highlight python %}
+"stephanie".startswith("s") # Returns True
+"stephanie".startswith("S") # Returns False.. method is case-sensitive!
+
+mystring = "Hu_126472"
+mystring.startswith("Hu_") # Returns True
+mystring.startswith("Av_") # Returns False
+{% endhighlight %}
 
 
 
