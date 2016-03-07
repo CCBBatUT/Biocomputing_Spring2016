@@ -9,7 +9,7 @@ materials: files/python5.zip
 ~~~ Under Construction ~~~
 
 
-###Good coding practices:
+### Good coding practices: ###
 
 * Modular coding, i.e. make each function do one thing and do it well. It’s easier to compose and test minimal, single-purpose functions.
 * Test a function/line of code before you write another one!
@@ -18,7 +18,7 @@ materials: files/python5.zip
 * Once you're a seasoned python-er, keep your style up to standard by reading 'best practices' (eg [link](https://www.memonic.com/user/pneff/folder/python/id/1bufp))
 
 
-###Ways to test your code:
+### Ways to test your code: ###
 
 1. use a reduced file
 2. use print statements
@@ -27,22 +27,22 @@ materials: files/python5.zip
 5. keep a log file
 	
 	
-###Once your code works:
+### Once your code works: ###
 
 1. Clean it up! Delete or comment out old print strings
 2. Add doc strings
 3. Test on more files.
 	
 	
-###What about unit testing?
+### What about unit testing? ###
 	
 Unless you're developing your own software, use other types of tests. We won't cover this today.
 
 
 
-###Examples
+### Examples ###
 
-#####1. If you're working with large files, use a reduced file to test your code. 
+* If you're working with large files, use a reduced file to test your code. 
 
 {% highlight bash %}
 head -1000 largeDataFile.csv > test.csv 
@@ -58,7 +58,7 @@ for file in directory_list:
 	function_name(file)
 {% end highlight %}
 
-#####2. As you're writing functions, use print to check that your output is what you expect.
+* As you're writing functions, use print to check that your output is what you expect.
 	
 {% highlight python %}
 import os
@@ -81,7 +81,7 @@ make_filelist('.', '.pdb')
 	
 If you're working with integers or floats or are getting a TypeError from python, you can use the type() function to check that the variable is in the format you expect. If you're having trouble indexing certain values, copy a subset into the python console and check your syntax.
 
-#####3. Python's assert clause allows you to test a comparison and exits the script if not true. You can have it print an error message upon exiting.
+* Python's assert clause allows you to test a comparison and exits the script if not true. You can have it print an error message upon exiting.
 
 {% highlight python %}
 assert a == b, "Error: comparison %s == %s is false" %(value1,value2)
@@ -104,7 +104,7 @@ sum_num(num_list)
 
 {% end highlight %}
 
-#####4. Python's try-except clauses allow you to trigger error messages for specific types of errors without killing the program.
+* Python's try-except clauses allow you to trigger error messages for specific types of errors without killing the program.
 	
 {% highlight python %}
 
@@ -121,8 +121,7 @@ num_list=[3,52,6,'b',2,463,'a']
 sum_num(num_list)
 {% end highlight %}
 
-	
-#####5. Print stdout to a log file when using your computer to check for errors. Everything you 'print' will be appended to the logfile. 
+* Print stdout to a log file when using your computer to check for errors. Everything you 'print' will be appended to the logfile. 
 
 {% highlight bash %}
 python script.py > logfile
@@ -161,7 +160,7 @@ function_name(arguments)
 {% end highlight %}
 
 
-###Now we will go through what modular coding and testing should look like with example protein-ligand files.
+* Now we will go through what modular coding and testing should look like with example protein-ligand files.
 See the files for [python5](python5_files.zip). The find_close_atoms.py script will take pairs of .pdb files and find atoms that are in close proximity between a ligand and the protein it binds to.
 
 
