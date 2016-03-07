@@ -46,7 +46,7 @@ Unless you're developing your own software, use other types of tests. We won't c
 
 {% highlight bash %}
 head -1000 largeDataFile.csv > test.csv 
-{% end highlight %}
+{% endhighlight %}
 
 If you plan to automate your analyses, test each function with only one file at first.
 
@@ -56,7 +56,7 @@ function_name('file1.txt')
 #rather than:
 for file in directory_list:
 	function_name(file)
-{% end highlight %}
+{% endhighlight %}
 
 * As you're writing functions, use print to check that your output is what you expect.
 	
@@ -77,7 +77,7 @@ def make_filelist(directory, file_ending):
 	return files_pdb
 
 make_filelist('.', '.pdb')
-{% end highlight %}
+{% endhighlight %}
 	
 If you're working with integers or floats or are getting a TypeError from python, you can use the type() function to check that the variable is in the format you expect. If you're having trouble indexing certain values, copy a subset into the python console and check your syntax.
 
@@ -85,7 +85,7 @@ If you're working with integers or floats or are getting a TypeError from python
 
 {% highlight python %}
 assert a == b, "Error: comparison %s == %s is false" %(value1,value2)
-{% end highlight %}
+{% endhighlight %}
 
 Example: 
 	
@@ -102,7 +102,7 @@ num_list=[3,52,6,'b',2,463,'a']
 sum_num(num_list)
 
 
-{% end highlight %}
+{% endhighlight %}
 
 * Python's try-except clauses allow you to trigger error messages for specific types of errors without killing the program.
 	
@@ -119,13 +119,13 @@ def sum_num(num_list):
 		
 num_list=[3,52,6,'b',2,463,'a']	
 sum_num(num_list)
-{% end highlight %}
+{% endhighlight %}
 
 * Print stdout to a log file when using your computer to check for errors. Everything you 'print' will be appended to the logfile. 
 
 {% highlight bash %}
 python script.py > logfile
-{% end highlight %}
+{% endhighlight %}
 	
 However, you will need to print directly to a logfile if you're running the program on a cluster (in this case you will submit your file to be run on the cluster rather than running python in your shell). Either open the logfile as a global variable at the top of the file or open and close it every time you write to it.
 	
@@ -142,7 +142,7 @@ def function_name(arguments):
 	print >>LOGFILE,"%s was parsed in %fs." %(input_file,(time.clock() - start))
 
 function_name(arguments)
-{% end highlight %}
+{% endhighlight %}
 
 {% highlight python %}
 #### open and close each time
@@ -157,7 +157,7 @@ def function_name(arguments):
 		f.write("%s was parsed in %fs." %(input_file,(time.clock() - start)))
 
 function_name(arguments)
-{% end highlight %}
+{% endhighlight %}
 
 
 * Now we will go through what modular coding and testing should look like with example protein-ligand files.
