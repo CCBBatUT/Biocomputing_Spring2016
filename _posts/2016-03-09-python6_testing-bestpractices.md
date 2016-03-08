@@ -63,21 +63,27 @@ for file in directory_list:
 	
 {% highlight python %}
 import os
+import sys
 
 def make_filelist(directory, file_ending):
 	"""This function makes a list of files with a certain ending in a certain directory.
 	"""
 	
 	files=os.listdir(directory)
-	files_pdb=[]
+	files_wanted=[]
 	for file in files:
 		if file.endswith(file_ending):
-			files_pdb.append(file)
+			files_wanted.append(file)
 	print files
-	print files_pdb
-	return files_pdb
+	print files_wanted
+	return files_wanted
 
-make_filelist('.', '.pdb')
+def main():
+	directory = sys.argv[1]
+	file_ending = sys.argv[2]
+	make_filelist(directory, file_ending)
+
+main()
 {% endhighlight %}
 	
 If you're working with integers or floats or are getting a TypeError from python, you can use the type() function to check that the variable is in the format you expect. If you're having trouble indexing certain values, copy a subset into the python console and check your syntax.
@@ -102,6 +108,34 @@ def sum_num(num_list):
 num_list=[3,52,6,'b',2,463,'a']		
 sum_num(num_list)
 
+{% endhighlight %}
+
+Another example: 
+{% highlight python %}
+import os
+import sys
+
+def make_filelist(directory, file_ending):
+	"""This function makes a list of files with a certain ending in a certain directory.
+	"""
+	
+	files=os.listdir(directory)
+	files_wanted=[]
+	for file in files:
+		if file.endswith(file_ending):
+			files_wanted.append(file)
+	print files
+	print files_wanted
+	return files_wanted
+
+def main():
+	# you can use assert statements to provide guidance for user input
+	assert len(sys.argv) == 3, "To run this script you must provide a directory and file ending"
+	directory = sys.argv[1]
+	file_ending = sys.argv[2]
+	make_filelist(directory, file_ending)
+	
+main()
 
 {% endhighlight %}
 
@@ -162,7 +196,7 @@ function_name(arguments)
 
 
 * Now we will go through what modular coding and testing should look like with example blast hit files.
-See the files for python5. The annotate_transcriptome.py script will take a blast output file, a transcriptome, and output a subset of the transcriptome with annotations.
+See the files for python5. The `annotate_transcriptome.py` script will take a blast output file, a transcriptome, and output a subset of the transcriptome with annotations.
 
 
 
