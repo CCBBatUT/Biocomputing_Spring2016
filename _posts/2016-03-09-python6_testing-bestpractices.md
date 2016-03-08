@@ -45,6 +45,7 @@ Unless you're developing your own software, use other types of tests. We won't c
 * If you're working with large files, use a reduced file to test your code. 
 
 {% highlight bash %}
+# save the first 1000 lines to a new file
 head -1000 largeDataFile.csv > test.csv 
 {% endhighlight %}
 
@@ -53,7 +54,7 @@ If you plan to automate your analyses, test each function with only one file at 
 {% highlight python %}
 function_name('file1.txt')
 
-#rather than:
+# rather than:
 for file in directory_list:
 	function_name(file)
 {% endhighlight %}
@@ -160,8 +161,8 @@ function_name(arguments)
 {% endhighlight %}
 
 
-* Now we will go through what modular coding and testing should look like with example protein-ligand files.
-See the files for [python5](python5_files.zip). The find_close_atoms.py script will take pairs of .pdb files and find atoms that are in close proximity between a ligand and the protein it binds to.
+* Now we will go through what modular coding and testing should look like with example blast hit files.
+See the files for python5. The annotate_transcriptome.py script will take a blast output file, a transcriptome, and output a subset of the transcriptome with annotations.
 
 
 
