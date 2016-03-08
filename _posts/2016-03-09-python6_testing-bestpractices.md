@@ -6,7 +6,12 @@ permalink: /python5_bestpractices/
 materials: files/python5.zip
 ---
 
-~~~ Under Construction ~~~
+
+## Today's Goals: ##
+- Review good coding practices
+- Learn about assert and try/except clauses
+- Write a script to annotate a transcriptome
+
 
 
 ### Good coding practices: ###
