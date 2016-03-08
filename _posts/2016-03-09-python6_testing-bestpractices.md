@@ -3,7 +3,7 @@ layout: post
 title: "Python VI: Best Practices and Testing"
 instructor: Becca
 permalink: /python5_bestpractices/
-materials: files/python5.zip
+materials: files/python6.zip
 ---
 
 
