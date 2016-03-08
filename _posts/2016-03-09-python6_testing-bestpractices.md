@@ -124,8 +124,6 @@ def make_filelist(directory, file_ending):
 	for file in files:
 		if file.endswith(file_ending):
 			files_wanted.append(file)
-	print files
-	print files_wanted
 	return files_wanted
 
 def main():
@@ -195,8 +193,9 @@ function_name(arguments)
 {% endhighlight %}
 
 
-* Now we will go through what modular coding and testing should look like with example blast hit files.
-See the files for python5. The `annotate_transcriptome.py` script will take a blast output file, a transcriptome, and output a subset of the transcriptome with annotations.
+* Now we will go through what modular coding and testing should look like.
+
+See the files for python5. The `annotate_transcriptome.py` script will take a blast output file, a transcriptome, and output a subset of the transcriptome with annotations for each sequence.
 
 
 
