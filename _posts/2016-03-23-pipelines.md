@@ -147,13 +147,17 @@ Less actually starts a program that allows you to *view* text at the console.  Y
 less contaminated.fasta
 ~~~
 
-### `wc` outputs the number of words, lines, and characters in the supplied file, or files
-
+#### `wc` outputs the number of words, lines, and characters in the supplied file, or files
+The argument `-l` restricts this to just lines, what we usually care about.
 ~~~ console
 wc Mus_musculus.GRCm38.75_chr1.bed
 wc Mus_musculus.GRCm38.75_chr1.bed contaminated.fasta   
 ~~~
+So of course, you can imagine using this to answer some questions.
 
+~~~
+
+####
 
 
 
@@ -197,7 +201,7 @@ sed -E s/\([a-zA-Z' ']*\)\(.*\)/'\1'/ example
 ```
 sed -E s/\([0-9]\)/'\1\
 '/ examplefile.txt
-{% endhighlight %}
+```
 
 ### `sort` sorts the lines in a file by numbers then lowercase letters then uppercase letters
 Command | Meaning | Example
