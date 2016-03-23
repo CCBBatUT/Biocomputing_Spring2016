@@ -110,14 +110,52 @@ Why is Unix the language of bioinformatics?  Read about the Unix philosophy here
 ### Do one thing and do it Well.
 
 Bash is great for getting a quick look at your data and answering questions easily.  While you *can* do all of these things in python with what you've already learned, it's often far easier and quicker to use the huge ecosystem of Unix tools already available and heavily optimized (albeit quirky).
-
+<br>
+We're going to look at a lot of commands, so remember, you can always use `man` to look up the specifics of bash commands. Try `man ls` to look at all the options for `ls`.  Pressing `q` will return you to your terminal.
 Lets review some basic bash commands:
 
-### We can use `head` to quickly look at the first lines in a file
+#### We can use `head` to quickly look at the first lines in a file
 
-~~~ 
+~~~ console
 head Mus_musculus.GRCm38.75_chr1.bed
 ~~~
+You can change the number of lines returned with the `-n` argument.
+
+#### `tail` is just like `head` but looks at the end of a file
+~~~ console
+tail Mus_musculus.GRCm38.75_chr1.bed
+~~~
+
+#### `history` shows you your recent shell commands
+~~~ console
+history
+~~~
+
+#### and `grep` is a powerful way to search files.
+But Stephanie will cover `grep` in GREAT detail later, so we'll mostly just think of it as "find" for now.
+~~~ console
+history | grep tail
+~~~
+
+#### Welcome to the new world.  The new world of `|` or "pipes"
+Piping allows you to redirect the output of one unix command to be the input of another command.  This is a *really* powerful idea and critical to powerfully using Unix.  We'll come back to it.
+
+#### `less` is a great way to inspect files.
+Less actually starts a program that allows you to *view* text at the console.  You won't be able to edit it.  To quit `less` just press `q`.  `space` takes you to the next page, and `b` goes back.  Lets look at our favorite bed file.
+
+~~~ console
+less contaminated.fasta
+~~~
+
+### `wc` outputs the number of words, lines, and characters in the supplied file, or files
+
+~~~ console
+wc Mus_musculus.GRCm38.75_chr1.bed
+wc Mus_musculus.GRCm38.75_chr1.bed contaminated.fasta   
+~~~
+
+
+
 
 
 
@@ -129,10 +167,10 @@ head Mus_musculus.GRCm38.75_chr1.bed
 * Mac users must include `-E` to access regular expressions
 * `sed` does not understand `\t` and `\n`, see below
 
-{% highlight console %}
+~~~ console
 # replace first instance of XX with YY for each line
 sed s/XX/YY/ filename > newfile
-{% endhighlight %}
+~~~
 
 {% highlight console %}
 # replace all instances of XX with YY
