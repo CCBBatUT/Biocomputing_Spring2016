@@ -155,10 +155,12 @@ less contaminated.fasta
 
 #### `wc` outputs the number of words, lines, and characters in the supplied file, or files
 The argument `-l` restricts this to just lines, what we usually care about.
+
 ~~~ console
 wc Mus_musculus.GRCm38.75_chr1.bed
 wc Mus_musculus.GRCm38.75_chr1.bed contaminated.fasta   
 ~~~
+
 So of course, you can imagine using this to answer some questions.
 
 #### `cut` pulls out specific columns ("fields") from files
