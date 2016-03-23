@@ -115,10 +115,9 @@ Lets review some basic bash commands:
 
 ### We can use `head` to quickly look at the first lines in a file
 
-{% highlight console %}
+~~~ bash
 head Mus_musculus.GRCm38.75_chr1.bed
-{% endhighlight %}
-
+~~~
 
 
 
