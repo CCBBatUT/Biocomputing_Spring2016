@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Special Topic VI"
-instructor: TBD
+title: "R and the Hadleyverse: Easy data manipulation and visualization"
+instructor: Sean Leonard
 permalink: /special6/
 materials: files/special6.zip
 ---
