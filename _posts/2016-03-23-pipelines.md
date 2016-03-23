@@ -138,6 +138,7 @@ history
 
 #### and `grep` is a powerful way to search files.
 But Stephanie will cover `grep` in GREAT detail later, so we'll mostly just think of it as "find" for now.
+
 ~~~ console
 history | grep tail
 ~~~
