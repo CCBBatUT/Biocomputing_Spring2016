@@ -181,11 +181,13 @@ cat Mus_musculus.GRCm38.75_chr1.gtf | column -t
 ## Now lets get to some Good Stuff
 
 #### `sort` will, of course, "sort" plain text data.  But its syntax can be confusing, so get familiar with the man page.  
+
 ~~~ console
 cat example.bed
 sort example.bed
 sort -k1,1 -k2,2n example.bed
 ~~~
+
 Command | Meaning | Example
 ----------|--------|---------
 -b | ignore leading blanks | `sort -b filename > filename.sorted`
