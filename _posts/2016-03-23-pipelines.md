@@ -299,6 +299,7 @@ sed -E s/\([0-9]\)/'\1\
  Calling all of your shell scripts from Python isn't really efficient.  There's a fair bit of computational overhead when you 'call' the shell from within python.  If you have a python analysis script you want to run on a lot of files, it's better to write a script in bash than to wrap it all in python.  
 
 A bash script is really just a list of commands.  By convention bash scripts end in `.sh` and can be run by typing:
+
 ~~~ console
 sh my_first_script.sh
 ~~~
@@ -306,6 +307,7 @@ sh my_first_script.sh
 Okay take a look at `head my_first_script`.  How do you want to take a look?  What do you see?  A similar shebang to a python script, and then some parameters.  After the parameters, each line is a separate bash command.
 
 Now lets look at using command line arguments in bash.  Try running the second script.
+
 ~~~ console
 sh my_second_script.sh
 #you can also run scripts like this, but you have to set them to be executable
@@ -319,6 +321,7 @@ So command line arguments are pretty easy.  What else is nice about bash scripts
 sh my_third_script.sh
 sh my_third_script.sh 15
 ~~~
+
 Now take a look at that script.  You can do conditionals and for loops in bash!  You can also do while and until loops, and complex conditional statements.  The syntax is weird, though (as in -ne instead of python's !=), so pay attention.  
 
 Okay lets get a little bit more real.  Lets say you have a pipeline of 10 commands you need to run on a bunch of files.  Instead of going command by command and file by file, you can wrap all the commands into a single bash script and call that for each file.  Look at this:
