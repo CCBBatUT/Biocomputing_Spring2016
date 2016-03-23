@@ -188,7 +188,7 @@ sort example.bed
 sort -k1,1 -k2,2n example.bed
 ~~~
 
-Command | Meaning | Example
+Command   | Meaning| Example
 ----------|--------|---------
 -b | ignore leading blanks | `sort -b filename > filename.sorted`
 -r | reverse | `sort -r filename > filename.sortedr`
@@ -221,10 +221,13 @@ grep -v "^#" Mus_musculus.GRCm38.75_chr1.gtf | cut -f3 | sort | uniq -c | sort -
 #### `awk` is a programming language onto itself.  We'll keep it (pretty) simple, though, and show how simple `awk` "one-liners" can be used as integral components of analysis pipelines.
 
 `awk` statements follow the syntax of `pattern { action }`.  They can be very simple:
+
 ~~~ console
 awk `{print $0}` example.bed
 ~~~
+
 `awk` is designed to process columnar data (data separated by fields).  `$1` represents the first field, `$2` the second, etc.
+
 ~~~ console
 awk '$3 - $2 > 18' example.bed
 ~~~
